@@ -195,6 +195,9 @@
         -webkit-background-size: cover;
         background-size: cover;
     }
+    .intro:before{
+        left: 0;
+    }
     .intro-start{
         /*width: 80%; это для резиновой*/
         width: 265px;
@@ -258,6 +261,9 @@
         background-color: #fff;
         border: none;
         border-top: 1px solid #C4C4C4;
+    }
+    .infinite-scroll-component{
+        overflow: unset !important;
     }
     .popular-master:first-child{
         border: none;

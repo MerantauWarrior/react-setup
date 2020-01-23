@@ -1,12 +1,34 @@
 @font-face {
-    font-family: "SF Text Regular";
-    font-weight: 400;
-    src: url("https://sf.abarba.me/SF-UI-Text-Regular.otf");
+    font-family: 'SF Text light';
+    src: url('../fonts/sf-ui-text/SFUIText-Light.ttf')  format('truetype');
 }
 @font-face {
-    font-family: "SF Display";
-    font-weight: 400;
-    src: url("https://sf.abarba.me/SF-UI-Display-Regular.otf");
+    font-family: 'SF Text regular';
+    src: url('../fonts/sf-ui-text/SFUIText-Regular.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'SF Text meduim';
+    src: url('../fonts/sf-ui-text/SFUIText-Medium.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'SF Text semibold';
+    src: url('../fonts/sf-ui-text/SFUIText-Semibold.ttf')  format('truetype');
+}
+@font-face {
+    font-family: "SF Display light";
+    src: url('../fonts/sf-ui-display/sf-ui-display-light-58646b33e0551.otf')  format('opentype');
+}
+@font-face {
+    font-family: "SF Display medium";
+    src: url('../fonts/sf-ui-display/sf-ui-display-medium-58646be638f96.otf')  format('opentype');
+}
+@font-face {
+    font-family: "SF Display bold";
+    src: url('../fonts/sf-ui-display/sf-ui-display-bold-58646a511e3d9.otf')  format('opentype');
+}
+@font-face {
+    font-family: "SF Display black";
+    src: url('../fonts/sf-ui-display/sf-ui-display-black-58646a6b80d5a.otf')  format('opentype');
 }
 html, body{
     width: 100%;
@@ -16,7 +38,7 @@ html, body{
 }
 body{
     position: relative;
-    font-family: "SF Text Regular",sans-serif;
+    font-family: 'SF Text regular', sans-serif;
     font-size: 14px;
     color: #000;
     background-color: #F9F9F9;
@@ -67,7 +89,7 @@ a:hover{
 }
 .landing-title{
     margin: 0;
-    font-family: "SF Display",sans-serif;
+    font-family: "SF Display medium",sans-serif;
     font-size: 30px;
     color: #1a1a1a;
 }
@@ -116,6 +138,7 @@ a:hover{
     width: 16px;
 }
 .product__info{
+    font-family:"SF Text light",sans-serif;
     padding-top: 9px;
 }
 .product__title{
@@ -145,6 +168,7 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    font-family:"SF Text regular",sans-serif;
 }
 .product-price__current{
     font-size: 16px;
@@ -177,7 +201,7 @@ a:hover{
 }
 .header-top{
     padding: 8px 0;
-    border: 1px solid rgba(81, 120, 221, 0.1);
+    border-bottom: 1px solid rgba(81, 120, 221, 0.1);
 }
 .header-top__inner{
     display: flex;
@@ -318,6 +342,11 @@ a:hover{
 }
 .menu-item{
     flex-grow: 1;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
 }
 .menu-item_active{
     background-color: #fff;
@@ -334,6 +363,10 @@ a:hover{
     padding: 0 15px;
     font-size: 13px;
     color: #000;
+}
+.menu-item_active .menu-link{
+    font-family: "SF Text meduim", sans-serif;
+    color: #F04650;
 }
 .submenu-list{
     position: absolute;
@@ -357,6 +390,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'SF Text light',sans-serif;
     font-size: 12px;
     color: #000;
 }
@@ -366,9 +400,18 @@ a:hover{
 }
 /*Intro*/
 .intro{
-    background: url("../img/intro-bg.jpg") no-repeat right center;
-    background-size: contain;
+    position: relative;
     overflow: hidden;
+}
+.intro:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 40%;
+    background: url("../img/intro-bg.jpg") no-repeat center center;
+    background-size: cover;
 }
 .intro-start{
     position: relative;
@@ -378,7 +421,6 @@ a:hover{
     justify-content: center;
     width: 465px;
     height: 400px;
-    font-family: "SF Display",sans-serif;
     color: #ffffff;
     background-color: #F04650;
 }
@@ -388,16 +430,18 @@ a:hover{
     top: 0;
     bottom: 0;
     right: 100%;
-    width: 600px;
+    width: 800px;
     background-color: #F04650;
 }
 .intro__title{
+    font-family: "SF Display bold", sans-serif;
     font-size: 70px;
     line-height: 83px;
     letter-spacing: 0.02em;
 }
 .intro__description{
     max-width: 75%;
+    font-family: "SF Display light", sans-serif;
     font-size: 20px;
 }
 /*Benefits*/
@@ -421,17 +465,19 @@ a:hover{
 }
 .benefits-item__title-counter{
     margin-right: 5px;
-    font-family: "SF Display",sans-serif;
+    font-family: "SF Display black", sans-serif;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 0.01em;
     color: #F04650;
 }
 .benefits-item__title-text{
+    font-family: 'SF Text meduim',sans-serif;
     font-size: 16px;
     color: #1a1a1a;
 }
 .benefits-item__description{
+    font-family: 'SF Text light',sans-serif;
     margin-top: 7px;
 }
 /*Share*/
@@ -465,6 +511,7 @@ a:hover{
 }
 .popular-master__info{
     width: 140px;
+    font-family:"SF Text light",sans-serif;
 }
 .popular-master-avatar{
     width: 60px;
@@ -496,6 +543,7 @@ a:hover{
     font-size: 12px;
 }
 .popular-master-link{
+    font-family:"SF Text meduim",sans-serif;
     font-size: 14px;
     color: #F04650;
     text-decoration: underline;
@@ -543,7 +591,7 @@ a:hover{
     text-align: center;
 }
 .footer-menu__title{
-    font-weight: 600;
+    font-family: 'SF Text semibold',sans-serif;
 }
 .footer-menu__arrow{
     display: none;
@@ -559,5 +607,5 @@ a:hover{
 }
 .footer-menu__link{
     color: #000;
-    font-weight: 100;
+    font-family: 'SF Text light',sans-serif;
 }

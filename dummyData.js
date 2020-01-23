@@ -158,8 +158,8 @@ export const popularMasterData = [
   {
     "name": 'Олег Сверлов',
     "description": 'Я работаю в данной сфере более 20 лет с сеьейне представляю жизни в сфере более всегонужно не представляю жи',
-    "rating": 4.9,
-    "avatar": "http://muz4in.net/2010/02/02/avatar/avatar_addiction_06.jpg",
+    "rating": 4.6,
+    "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
     "slides" : [
       "img/pm-pr-sm-1.jpg",
