@@ -22,13 +22,13 @@ class PopularMasters extends Component {
         data: prevState.data.concat(popularMasterData.slice(prevState.position, prevState.position+2)),
         position: prevState.position+2
       }));
-    }, 1000);
+    }, 500);
   };
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({data: popularMasterData.slice(0, 2), dataLoaded: true, position: 2});
-    }, 1500);
+    }, 500);
   }
   render() {
     return (

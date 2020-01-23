@@ -5,19 +5,19 @@ export const MenuData = [
     "subcategories": [
       {
         "name": "Украшения для стен 1",
-        "picture": "img/submenu-icon-test.svg"
+        "picture": "img/Icon_decor.svg"
       },
       {
         "name": "Украшения для стен 2",
-        "picture": "img/submenu-icon-test.svg"
+        "picture": "img/Icon_decor.svg"
       },
       {
         "name": "Украшения для стен 3",
-        "picture": "img/submenu-icon-test.svg"
+        "picture": "img/Icon_decor.svg"
       },
       {
         "name": "Украшения для стен 4",
-        "picture": "img/submenu-icon-test.svg"
+        "picture": "img/Icon_decor.svg"
       }
     ]
   },
