@@ -479,6 +479,7 @@ a:hover{
 .benefits-item__description{
     font-family: 'SF Text light',sans-serif;
     margin-top: 7px;
+    line-height: 17px;
 }
 /*Share*/
 .share{
@@ -539,6 +540,10 @@ a:hover{
     font-size: 12px;
 }
 .popular-master-description{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
     margin: 15px 0;
     font-size: 12px;
 }

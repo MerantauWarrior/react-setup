@@ -1,3 +1,179 @@
+@media screen and (min-width: 767px) and (max-width: 1024px){
+    /*General*/
+    .landing-title{
+        text-align: center;
+    }
+    /*Header*/
+    .header{
+        padding: 15px 0 0 0;
+    }
+    .header-top{
+        padding: 0;
+        border: none;
+    }
+    .header-top__inner{
+        justify-content: space-between;
+    }
+    .logo{
+        order: 2;
+        width: 92px;
+    }
+    .header-top-menu{
+        order: 1;
+        margin-left: 0;
+    }
+    .header-top-menu__mobile{
+        display: block;
+    }
+    .header-top-menu__inner{
+        display: none;
+        position: absolute;
+        top: 35px;
+        left: -15px;
+        width: 100vw;
+        padding: 15px 0 19px 0;
+        background-color: #F9F9F9;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        z-index: 99;
+    }
+    .header-top-menu_opened .header-top-menu__inner{
+        display: flex;
+        justify-content: center;
+    }
+    .header-top-menu__list{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-top-menu__item{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .header-top-menu__link{
+        font-size: 14px;
+    }
+    .header-top-menu__item:nth-child(3){
+        order: 1;
+    }
+    .header-top-menu__item:nth-child(1),
+    .header-top-menu__item:nth-child(2),
+    .header-top-menu__item:nth-child(4),
+    .header-top-menu__item:nth-child(5){
+        order: 2;
+    }
+    .enter-link{
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        border: none;
+        padding-bottom: 10px;
+    }
+    .header-top-wishlist{
+        margin-top: 20px;
+    }
+    .header-top-wishlist__icon{
+        width: 16px;
+    }
+    .header-top-wishlist__text{
+        display: inline-block;
+    }
+    .header-top-controls{
+        order: 3;
+        margin-left: 0;
+    }
+    .search{
+        order: 4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        margin-top: 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 15px;
+        border-top: 1px solid rgba(81, 120, 221, 0.1);
+    }
+    .header-catalog-menu{
+        display: block;
+    }
+    .form-search{
+        width: 60%;
+    }
+    .inp-search{
+        height: 40px;
+        line-height: 38px;
+    }
+    /*Menu*/
+    .menu{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #F9F9F9;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        overflow: hidden;
+    }
+    .menu_opened{
+        display: block;
+    }
+    .menu-list{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .menu-item{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .menu-item_active{
+        padding-top: 22px;
+        padding-bottom: 13px;
+    }
+    .menu-item_active{
+        box-shadow: none;
+        border-top: 1px solid rgba(81, 120, 221, 0.05);
+        border-bottom: 1px solid rgba(81, 120, 221, 0.05);
+    }
+    .menu-link{
+        justify-content: flex-start;
+        height: auto;
+        font-size: 12px;
+    }
+    .submenu-list{
+        position: static;
+        padding: 15px;
+    }
+    .submenu-item{
+        width: 25%;
+    }
+    .submenu-link{
+        font-size: 10px;
+    }
+    /*Popular*/
+    .popular-masters{
+        margin-right: 0;
+    }
+    .popular-master{
+        justify-content: center;
+    }
+    .popular-master__products{
+        margin-top: 30px;
+        margin-left: 0;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: landscape){
+    /*Share*/
+    .share-products {
+        margin: 17px -15px 0 0;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: portrait){
+    /*Share*/
+    .share-products{
+        justify-content: center;
+    }
+}
 @media screen and (min-width: 320px) and (max-width: 767px){
     /*General*/
     .landing-title{
@@ -320,7 +496,7 @@
     }
     .popular-master-slider{
         flex-wrap: nowrap;
-        overflow: hidden;
+        overflow: scroll;
         margin-right: -15px;
     }
     .popular-master-slider__main,
@@ -332,6 +508,7 @@
     .popular-master-slider__slides{
         width: 1000px;
         margin-left: 0;
+        padding-right: 15px;
         flex-direction: row;
     }
     .popular-master-slider__slide{

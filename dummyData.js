@@ -157,11 +157,12 @@ export const MenuData = [
 export const popularMasterData = [
   {
     "name": 'Олег Сверлов',
-    "description": 'Я работаю в данной сфере более 20 лет с сеьейне представляю жизни в сфере более всегонужно не представляю жи',
+    "description": 'Я работаю в данной сфере более 20 лет с сеьейне представляю жизни в сфере более всегонужно не' +
+    ' представляю жиasdasas asd',
     "rating": 4.6,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -169,11 +170,38 @@ export const popularMasterData = [
   },
   {
     "name": 'Олег Master',
-    "description": 'Я работаю в данной сфере более 20 лет с сеьейне представляю жизни в сфере более всегонужно не представляю жи',
+    "description": 'Я работаю в данной сфере более 20 лет с сеьейне представляю жизни в сфере более всегонужно не' +
+    ' представляю жиasdas sad',
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
+      "img/pm-pr-sm-2.jpg",
+      "img/pm-pr-sm-1.jpg",
+      "img/pm-pr-sm-3.jpg"
+    ]
+  },
+  {
+    "name": 'Max Shneider',
+    "description": 'Я работаю в данной сфере более 20 лет с сеьейне представляю жизни в сфере более всегонужно не' +
+    ' представляю жиasdas asd',
+    "rating": 5,
+    "avatar": "img/popular-master-user.jpg",
+    "sliderMain": "img/pm-pr-main.jpg",
+    "slides": [
+      "img/pm-pr-sm-3.jpg",
+      "img/pm-pr-sm-1.jpg",
+      "img/pm-pr-sm-2.jpg"
+    ]
+  },
+  {
+    "name": 'Олег Master',
+    "description": 'Я работаю в данной сфере более 20 лет с сеьейне представляю жизни в сфере более всегонужно не' +
+    ' представляю жиasdas as',
+    "rating": 4.1,
+    "avatar": "img/popular-master-user.jpg",
+    "sliderMain": "img/pm-pr-main.jpg",
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -185,7 +213,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -197,7 +225,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -209,7 +237,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -221,7 +249,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -233,7 +261,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -245,7 +273,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -257,7 +285,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -269,7 +297,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -281,7 +309,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -293,7 +321,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -305,7 +333,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -317,7 +345,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -329,7 +357,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -341,7 +369,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -353,7 +381,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -365,7 +393,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -377,7 +405,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -389,7 +417,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -401,7 +429,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -413,7 +441,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -425,7 +453,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -437,7 +465,7 @@ export const popularMasterData = [
     "rating": 4.1,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-2.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-3.jpg"
@@ -449,31 +477,7 @@ export const popularMasterData = [
     "rating": 5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
-      "img/pm-pr-sm-3.jpg",
-      "img/pm-pr-sm-1.jpg",
-      "img/pm-pr-sm-2.jpg"
-    ]
-  },
-  {
-    "name": 'Олег Master',
-    "description": 'Я работаю в данной сфере более 20 лет с сеьейне представляю жизни в сфере более всегонужно не представляю жи',
-    "rating": 4.1,
-    "avatar": "img/popular-master-user.jpg",
-    "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
-      "img/pm-pr-sm-2.jpg",
-      "img/pm-pr-sm-1.jpg",
-      "img/pm-pr-sm-3.jpg"
-    ]
-  },
-  {
-    "name": 'Max Shneider',
-    "description": 'Я работаю в данной сфере более 20 лет с сеьейне представляю жизни в сфере более всегонужно не представляю жи',
-    "rating": 5,
-    "avatar": "img/popular-master-user.jpg",
-    "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"
@@ -485,7 +489,7 @@ export const popularMasterData = [
     "rating": 2.5,
     "avatar": "img/popular-master-user.jpg",
     "sliderMain": "img/pm-pr-main.jpg",
-    "slides" : [
+    "slides": [
       "img/pm-pr-sm-3.jpg",
       "img/pm-pr-sm-1.jpg",
       "img/pm-pr-sm-2.jpg"

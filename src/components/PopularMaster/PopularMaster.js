@@ -3,7 +3,7 @@ import React from 'react';
 const PopularMaster = (props) => {
   let slides = props.data.slides.map((slide, index) => {
     return(
-      <div key={index} className="popular-master-slider__slide">
+      <div key={index} className="popular-master-slider__slide" ref="slideRef">
         <img src={slide} alt=""/>
       </div>
     )

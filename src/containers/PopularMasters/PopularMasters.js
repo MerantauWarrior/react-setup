@@ -9,11 +9,12 @@ class PopularMasters extends Component {
     dataLoaded: false,
     data: [],
     position: 0,
+    limit: 10,
     hasMore: true
   };
 
   fetchMoreData = () => {
-    if (this.state.data.length >= 28) {
+    if (this.state.data.length >= this.state.limit) {
       this.setState({ hasMore: false });
       return;
     }

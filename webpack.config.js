@@ -1,11 +1,13 @@
 const path = require("path");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    home: './src/index.js'
+  },
   output: {
     path: path.resolve(__dirname, 'js'),
-    filename: 'react/bundle.js',
-    chunkFilename: '[id].js',
+    filename: 'react/[name].bundle.js',
+    chunkFilename: '[name][id].js',
     publicPath: ''
   },
   resolve: {
