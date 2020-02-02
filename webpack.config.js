@@ -7,7 +7,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'js'),
     filename: 'react/[name].bundle.js',
-    chunkFilename: '[name][id].js',
     publicPath: ''
   },
   resolve: {
