@@ -44,7 +44,7 @@ class PopularMasters extends Component {
             loader={<h4>Загружаю мастеров...</h4>}
             endMessage={
               <p style={{ textAlign: "center" }}>
-                <b>Всё! Популярные Мастера закончились</b>
+                <b>Всё. Популярные Мастера закончились!</b>
               </p>
             }
           >
