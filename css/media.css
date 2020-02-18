@@ -1,6 +1,6 @@
 @media screen and (min-width: 767px) and (max-width: 1024px){
     /*General*/
-    .landing-title{
+    .title{
         text-align: center;
     }
     /*Header*/
@@ -161,6 +161,10 @@
         margin-top: 30px;
         margin-left: 0;
     }
+    /*Intro*/
+    .intro__bg img{
+        min-height: 100%;
+    }
 }
 @media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: landscape){
     /*Share*/
@@ -176,7 +180,8 @@
 }
 @media screen and (min-width: 320px) and (max-width: 767px){
     /*General*/
-    .landing-title{
+    .title{
+        width: 100%;
         font-size: 16px;
         line-height: 19px;
         text-align: center;
@@ -365,16 +370,16 @@
         font-size: 10px;
     }
     /*Intro*/
-    .intro{
-        height: 200px;
-        background-position: center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
     .intro:before{
         left: 0;
     }
+    .intro__bg{
+        position: relative;
+    }
     .intro-start{
+        position: absolute;
+        top: 0;
+        left: 15px;
         width: 265px;
         height: auto;
         padding: 11px 15px 11px 0;
@@ -573,5 +578,95 @@
     }
     .footer-menu__list-item{
         font-size: 10px;
+    }
+    /*---Seller Page---*/
+    .seller{
+        padding: 80px 0 17px 0;
+    }
+    .seller:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 800px;
+        background-color: #F04650;
+    }
+    .seller__avatar{
+        position: absolute;
+        top: -64px;
+        width: 128px;
+        height: 128px;
+        left: 50%;
+        margin-left: -64px;
+        border: 2px solid #FFFFFF;
+    }
+    .seller__contact-mobile{
+        display: block;
+        position: absolute;
+        right: -2px;
+        bottom: -2px;
+        width: 35px;
+        height: 35px;
+        background: url("../img/seller-page/seller-contact-mobile.svg") no-repeat center center, #FDFDFD;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+    }
+    .seller__name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .seller__description{
+        margin-top: 7px;
+        margin-bottom: 26px;
+    }
+    .seller__contact{
+        display: none;
+    }
+    .seller-products-info{
+        justify-content: space-between;
+    }
+    .seller-products-info__item.seller-rating{
+        display: none;
+    }
+    .seller-rating--mobile{
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        margin-left: 15px;
+    }
+    .seller-rating--mobile img{
+        width: 8px;
+        height: 10px;
+    }
+    .sorting{
+        margin-top: 15px;
+    }
+    .seller-products{
+        padding: 34px 0;
+    }
+    .seller-gallery{
+        margin-bottom: 34px;
+        overflow: hidden;
+    }
+    .seller-gallery__gallery{
+        margin-top: 0;
+    }
+    .gallery{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        margin-right: 1px;
+    }
+    .gallery__item{
+        width: 100%;
+        min-width: 255px;
+        padding: 6px 0 6px 15px;
+    }
+    .gallery__item img{
+        width: 100%;
     }
 }

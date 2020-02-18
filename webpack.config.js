@@ -21,8 +21,30 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
+        use: [
+          {loader: "style-loader"},
+          {loader: 'css-loader',
+            options: {
+              modules: {
+                mode: 'local',
+                localIdentName: '[local]--[hash:base64:5]'
+              },
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'react/assets',
+              publicPath: 'js/react/assets',
+            },
+          },
+        ],
+      },
     ]
   }
 };

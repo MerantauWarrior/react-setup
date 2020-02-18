@@ -5,7 +5,8 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Categoty</title>
+  <title>Seller Page</title>
+  <link rel="stylesheet" href="css/ui.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 </head>
@@ -63,27 +64,45 @@
 </header>
 
 <section class="intro">
+  <div class="intro__bg">
+    <img src="img/seller-page/seller-bg.jpg" alt="seller page description">
+  </div>
   <div class="container">
-    <div class="intro-start">
-      <div class="intro__title">dalaran</div>
-      <div class="intro__description"><span>Уникальные производители</span> и товары для вас и ваших близких</div>
+    <div class="seller">
+      <div class="seller__avatar">
+        <img src="img/seller-page/seller-avatar.jpg" alt="seller name">
+        <a href="#" class="seller__contact-mobile"></a>
+      </div>
+      <div class="seller__name">Мария Иванова
+        <div class="seller-rating seller-rating--mobile">
+          <img src="img/seller-page/rating.svg" alt="Rating">4.9
+        </div>
+      </div>
+      <div class="seller__description">Формирование имиджа разнородно экономит маркетинг, отвоевывая свою долю рынка.
+        Бренд трансформирует коллективный стратегический маркетинг, не считаясь с затратами. Пресс-клиппинг, как принято
+        считать, подсознательно синхронизирует коллективный
+      </div>
+      <a href="#" class="seller__contact">Написать мастеру</a>
+      <div class="seller__products-info seller-products-info">
+        <div class="seller-products-info__item seller-rating">
+          <img src="img/seller-page/rating.svg" alt="Rating">4.9
+        </div>
+        <div class="seller-products-info__item">Всего товаров: <span>32</span></div>
+        <div class="seller-products-info__item">Проданно товаров: <span>20</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="category">
+<section class="seller-products">
   <div class="container">
-    <div class="category__top">
-      <div class="landing-title">Картины</div>
-    </div>
-    <div class="category__content" id="CategoryContent"></div>
+    <div id="SellerProducts"></div>
   </div>
 </section>
 
-<section class="popular">
+<section class="seller-gallery">
   <div class="container">
-    <h2 class="landing-title">Популярные мастера</h2>
-    <div class="popular-masters" id="PopularMasters"></div>
+    <div id="SellerGallery"></div>
   </div>
 </section>
 
@@ -144,7 +163,8 @@
             </div>
           </div>
           <ul class="footer-menu__list">
-            <li class="footer-menu__list-item"><a href="mailto:admin@admin.admin" class="footer-menu__link">Еmail</a></li>
+            <li class="footer-menu__list-item"><a href="mailto:admin@admin.admin" class="footer-menu__link">Еmail</a>
+            </li>
             <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Политика</a></li>
             <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
           </ul>

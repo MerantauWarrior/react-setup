@@ -1,0 +1,63 @@
+/*Select*/
+.MySelect {
+    position: relative;
+    width: 100%;
+}
+.MySelect__selected {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 14px;
+    border: 1px solid #E5E5E5;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.MySelect__selected.select_active{
+    border: 1px solid #F04650;
+}
+.MySelect__selected:after {
+    content: '';
+    width: 13px;
+    height: 8px;
+    background: url("./sort-arrow.svg") no-repeat center;
+}
+.MySelect__selected.select_active:after {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.MySelect__items div,.MySelect__selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    cursor: pointer;
+}
+.MySelect__items div{
+    margin: 0 14px;
+}
+.MySelect-items div:not(:first-child){
+    border-top: 1px solid #E5E5E5;
+}
+.MySelect__items {
+    position: absolute;
+    background-color: inherit;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #E5E5E5;
+    border-top:none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    z-index: 99;
+}
+.select_active+.MySelect__items{
+    border: 1px solid #F04650;
+    border-top:none;
+}
+.MySelect__items div:hover{
+    color: #F04650;
+}
