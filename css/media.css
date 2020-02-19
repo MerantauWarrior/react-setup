@@ -426,6 +426,10 @@
     .share-products{
         margin: 16px -7px 0 -7px;
     }
+    /*Other*/
+    .other{
+        padding-bottom: 23px;
+    }
     /*Popular*/
     .popular{
         padding: 17px 0 3px 0;

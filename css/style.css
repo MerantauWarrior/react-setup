@@ -618,7 +618,10 @@ a:hover {
     flex-wrap: wrap;
     margin: 17px -15px 0 -15px;
 }
-
+/*Other*/
+.other{
+    padding-bottom: 68px;
+}
 /*Popular*/
 .popular {
     padding: 66px 0 50px 0;
