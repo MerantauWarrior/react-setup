@@ -165,6 +165,21 @@
     .intro__bg img{
         min-height: 100%;
     }
+    /*Single Page*/
+    .single-product__inner{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .single-product-side,
+    .single-product__feedbacks{
+        margin-left:0;
+        float: none;
+    }
+    .single-product__feedbacks{
+        margin-top: 30px;
+    }
 }
 @media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: landscape){
     /*Share*/
@@ -228,7 +243,7 @@
     }
     .header-top{
         padding: 0;
-        border: none;
+        /*border: none;*/
     }
     .header-top__inner{
         justify-content: space-between;
@@ -672,5 +687,232 @@
     }
     .gallery__item img{
         width: 100%;
+    }
+    /*---Single Page---*/
+    .single-product{
+        padding: 15px 0 35px 0;
+    }
+    .single-product__inner{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .single-product__gallery{
+        order:0;
+        margin-bottom: 0;
+    }
+    .single-product__rating{
+        order:1;
+        margin: 14px 0 6px 0 ;
+    }
+    .single-product__rating-title{
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .single-product-title{
+        order:2;
+        font-family:'SF Display light',sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 7px;
+    }
+    form#single-product{
+        order:3;
+    }
+    .single-product-controls__qty{
+        order: 1;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .single-product-controls__qty-title{
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .single-product-controls__qty-btn{
+        width: 20px;
+        height: 20px;
+    }
+    .single-product-controls__qty-text{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .single-product-controls__price{
+        order:0;
+    }
+    .single-product__form-label{
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .custom-select-lg .select-items div, .custom-select-lg  .select-selected {
+        height: 40px;
+    }
+    .single-product__form-field{
+        margin-bottom: 9px;
+    }
+    .single-product-controls__price-btns-title{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .single-product-controls__price-btns{
+        justify-content: flex-start;
+    }
+    .single-product-controls__price-btn{
+        width: 28px;
+        height: 20px;
+        margin: 0 0 0 10px;
+    }
+    .single-product-controls__price-btn:first-child:after{
+        display: none;
+    }
+    .single-product__tech{
+        order:4;
+        padding-top: 2px;
+    }
+    .single-product-small-title{
+        font-family:'SF Display medium',sans-serif;
+    }
+    .single-product-small-title{
+        width: 100%;
+    }
+    .single-product__tech-item{
+        margin-top: 10px;
+    }
+    .single-product__tech-item:not(:first-child) .single-product-small-title{
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .single-product__feedbacks{
+        order:5;
+        border-top: 1px solid #E8ECF6;
+        padding-top: 28px;
+        margin-top: 32px;
+    }
+    .single-product-master{
+        order:6;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: none;
+        border-top: 1px solid #E8ECF6;
+        border-bottom: 1px solid #E8ECF6;
+        margin-top: 30px;
+        margin-bottom: 0;
+        padding: 24px 0 28px 0;
+    }
+    .single-product-master__avatar{
+        width: 80px;
+        height: 80px;
+    }
+    .single-product-master__info{
+        margin-right: 0;
+    }
+    .single-product-master__rating{
+        align-items: baseline;
+    }
+    .single-product-master__name{
+        margin: 8px 0 5px 0;
+        font-family:'SF Text regular',sans-serif;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .single-product-master__text{
+        margin-top: 9px;
+        font-family:'SF Text light',sans-serif;
+    }
+    .single-product-master__link{
+        display: none;
+    }
+    .single-product-master__mob-title{
+        display: block;
+    }
+    .single-product-master__link-mobile{
+        display: block;
+        margin-right: 80px;
+        font-family:'SF Text meduim',sans-serif;
+        font-size: 10px;
+        line-height: 13px;
+        text-decoration: underline;
+    }
+    .single-product__also{
+        order:7;
+        padding-top: 21px;
+    }
+    .single-product__similar{
+        order:8;
+        padding-top: 21px;
+    }
+    .single-product__submit{
+        order:9;
+        height: 43px;
+    }
+    .single-product-slider{
+        display: none;
+    }
+    .single-product-side,
+    .single-product__feedbacks{
+        width: 100%;
+        float: none;
+    }
+    .single-product-feedback__top{
+        order: 0;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .single-product-feedback__gallery{
+        order: 2;
+        min-width: 100%;
+        margin-top: 10px;
+        margin-right: -15px;
+    }
+    .single-product-feedback__gallery-item{
+        width: 25%;
+        margin-right: 0;
+        padding-right: 15px;
+    }
+    .single-product-feedback__avatar{
+        width: 30px;
+        height: 30px;
+    }
+    .single-product-feedback__text{
+        order: 1;
+    }
+    .single-product-feedback__info{
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+        margin-right: 0;
+        margin-left: 8px;
+    }
+    .single-product-feedback__date{
+        font-family:"SF Display medium",sans-serif;
+        color: #C4C4C4;
+        margin: 0;
+    }
+    .single-product-feedback__rating{
+        margin-top: 15px;
+        margin-left: -38px;
+    }
+    .single-product-slider-main__btn{
+        display: none;
+    }
+    .slick-dots{
+        position: absolute;
+        width: 100%;
+        bottom: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    .slick-dots button{
+        display: none;
+    }
+    .slick-dots li{
+        width: 16px;
+        height: 2px;
+        background-color: #F9F9F9;
+        margin: 5px 2px;
+    }
+    .slick-dots li.slick-active{
+        background-color: #F04650;
     }
 }

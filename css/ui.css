@@ -65,3 +65,7 @@
 .select-items div:hover, .same-as-selected {
     color: #F04650;
 }
+/*mod -lg*/
+.custom-select-lg .select-items div, .custom-select-lg  .select-selected {
+    height: 46px;
+}

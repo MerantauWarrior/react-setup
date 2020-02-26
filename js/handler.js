@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementsByTagName('body')[0].classList.remove('ovh');
     }
   });
-
   //Toggle header mobile menu
   document.getElementsByClassName('header-top-menu__mobile')[0].addEventListener('click', function () {
     this.closest('.header-top-menu').classList.toggle('header-top-menu_opened');
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementsByClassName('fader')[0].classList.toggle('fader_active');
     document.getElementsByTagName('body')[0].classList.toggle('ovh');
   });
-//Select
+  //Select
   let x, i, j, selElmnt, a, b, c;
   x = document.getElementsByClassName("custom-select");
   for (i = 0; i < x.length; i++) {
@@ -98,6 +97,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   document.addEventListener("click", closeAllSelect);
-
 
 });

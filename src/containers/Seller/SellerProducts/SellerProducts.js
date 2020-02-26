@@ -28,7 +28,7 @@ class Seller extends Component {
     }, 0);
   }
 
-  comparatorDesc = (propName) => (a, b) => a[propName] == b[propName] ? 0 : a[propName] > b[propName] ? -1 : 1;
+  comparatorDesc = (propName) => (a, b) => a[propName] === b[propName] ? 0 : a[propName] > b[propName] ? -1 : 1;
 
   sortHandler = (value) => {
     let sortedProducts = this.state.products.sort(this.comparatorDesc(value));
