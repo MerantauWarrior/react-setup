@@ -76,7 +76,7 @@
     right: 25px;
 }
 
-@media screen and (max-height: 1000px){
+@media screen and (max-height: 1000px) and (min-width: 1025px){
     .gallery-modal{
         text-align: center;
     }

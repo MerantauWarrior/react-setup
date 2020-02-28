@@ -1,8 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-  document.addEventListener('touchmove', function (event) {
-    if (event.scale !== 1) { event.preventDefault(); }
-  }, false);
+  //Helper Functions
+  if (!Element.prototype.closest) {
+    Element.prototype.closest = function (css) {
+      let nodeE = this;
+      while (nodeE) {
+        if (nodeE.matches(css)) return nodeE;
+        else nodeE = nodeE.parentElement;
+      }
+      return null;
+    };
+  }
   //Toggle footer mobile menu
   document.querySelectorAll('.footer-menu__title').forEach(function (title) {
     title.addEventListener('click', function () {
@@ -122,16 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   //Checkout
-  if (!Element.prototype.closest) {
-    Element.prototype.closest = function (css) {
-      let nodeE = this;
-      while (nodeE) {
-        if (nodeE.matches(css)) return nodeE;
-        else nodeE = nodeE.parentElement;
-      }
-      return null;
-    };
-  }
   if (document.querySelectorAll('.checkout').length !== 0) {
     document.querySelectorAll('.js-checkout-delete').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
@@ -145,6 +142,31 @@ document.addEventListener("DOMContentLoaded", function () {
         this.closest('.checkout-item').remove();
         console.log(result);
       });
+    });
+  }
+  //Fixed Buy btns on mobile
+  if (document.querySelectorAll('.checkout__buy, .single-product__submit').length !== 0){
+    let fixUnfixBtns = function () {
+      if (window.matchMedia("(max-width: 767px) and (orientation: portrait)").matches) {
+        window.addEventListener('scroll', function() {
+          let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+          if (windowRelativeBottom > document.documentElement.clientHeight + 150){
+            document.querySelectorAll('.checkout__buy, .single-product__submit')[0].classList.add('fixed-mobile');
+          }else{
+            document.querySelectorAll('.checkout__buy, .single-product__submit')[0].classList.remove('fixed-mobile');
+          }
+        });
+      }else {
+        return false;
+      }
+    };
+    fixUnfixBtns();
+    window.addEventListener("orientationchange", function () {
+      if(screen.orientation.type === "portrait-primary"){
+        fixUnfixBtns();
+      }else {
+        return false;
+      }
     });
   }
 

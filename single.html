@@ -210,7 +210,7 @@
           </div>
         </div>
       </form>
-      <button class="btn-red single-product-side single-product__submit" type="submit" form="single-product">Добавить в
+      <button class="btn-red single-product-side single-product__submit fixed-mobile" type="submit" form="single-product">Добавить в
         корзину
       </button>
       <div class="single-product__tech single-product-side">
@@ -1118,6 +1118,7 @@
     //Modal
     let group;
     let active;
+    let i = 0;
     $('.single-product-feedback__gallery-item').click(function (e) {
       e.preventDefault();
       group = [];
@@ -1127,11 +1128,21 @@
       });
       let srcImg = $(this).attr('data-src');
       active.push(srcImg);
+      i = parseInt(group.indexOf(active[0]));
+      if(i < 1){
+        $('.gallery-modal__prev').hide();
+      }else {
+        $('.gallery-modal__prev').show();
+      }
+      if(i < group.length-1){
+        $('.gallery-modal__next').show();
+      }else{
+        $('.gallery-modal__next').hide();
+      }
       $('body').addClass('ovh');
       $('.gallery-modal').show();
       $('.gallery-modal__item').attr('src', srcImg);
     });
-    let i = 0;
     $('.gallery-modal__prev, .gallery-modal__next').click(function (e) {
       e.preventDefault();
       i = parseInt(group.indexOf(active[0]));
