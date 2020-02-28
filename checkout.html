@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="css/ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+<div class="fader"></div>
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__inner">
+        <div class="logo">
+          <a href="#"><img src="img/logo.svg" alt="Dalaran"></a>
+        </div>
+        <div class="search">
+          <a href="#" class="header-catalog-menu">Каталог</a>
+          <form action="" method="get" class="form-search">
+            <input type="text" name="search" id="search" class="inp-search">
+            <button class="btn-search" type="submit"></button>
+          </form>
+        </div>
+        <div class="header-top-menu">
+          <div class="header-top-menu__mobile"></div>
+          <div class="header-top-menu__inner">
+            <ul class="header-top-menu__list">
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать мастером</a></li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать покупателем</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-menu__link enter-link">
+                  <img src="img/enter.svg" class="enter-link__img">Вход
+                </a>
+              </li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">О нас</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-wishlist">
+                  <img src="img/wishlist.svg" class="header-top-wishlist__icon" alt="wishlist">
+                  <span class="header-top-wishlist__text">Избранное</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-top-controls">
+          <a href="#" class="header-top-basket">
+            <span class="header-top-basket__qty">2</span>
+            <img src="img/basket.svg" alt="basket" class="header-top-basket__icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="container">
+      <ul class="menu-list" id="MenuList"></ul>
+    </div>
+  </div>
+</header>
+
+<section class="checkout">
+  <div class="container">
+    <h1 class="title">Корзина</h1>
+    <div class="checkout__inner">
+      <div class="checkout__items">
+        <div class="checkout-item" data-index="0">
+          <div class="checkout-item__visual">
+            <div class="checkout-item__visual-img">
+              <label class="checkout-item__checkbox">
+                <input type="checkbox" name="product-1" id="product-1">
+                <span></span>
+              </label>
+              <img src="img/checkout/product-1.jpg" alt="product name">
+            </div>
+            <div class="checkout-item__visual-info">
+              <div class="checkout-item__controls">
+                <a href="#" class="checkout-item__controls-item">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.50033 17.155L5.48866 14.1667H15.0003C15.4424 14.1667 15.8663 13.9911 16.1788 13.6785C16.4914 13.366 16.667 12.942 16.667 12.5V5C16.667 4.55797 16.4914 4.13405 16.1788 3.82149C15.8663 3.50893 15.4424 3.33333 15.0003 3.33333H4.16699C3.72496 3.33333 3.30104 3.50893 2.98848 3.82149C2.67592 4.13405 2.50033 4.55797 2.50033 5V17.155ZM2.50033 18.3333H1.66699V5C1.66699 4.33696 1.93038 3.70107 2.39923 3.23223C2.86807 2.76339 3.50395 2.5 4.16699 2.5H15.0003C15.6634 2.5 16.2993 2.76339 16.7681 3.23223C17.2369 3.70107 17.5003 4.33696 17.5003 5V12.5C17.5003 13.163 17.2369 13.7989 16.7681 14.2678C16.2993 14.7366 15.6634 15 15.0003 15H5.83366L2.50033 18.3333ZM5.00033 5.83333H14.167V6.66667H5.00033V5.83333ZM5.00033 8.33333H14.167V9.16667H5.00033V8.33333ZM5.00033 10.8333H11.667V11.6667H5.00033V10.8333Z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="checkout-item__controls-item">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.53661 10.2101C3.17966 9.85301 2.90316 9.42376 2.72567 8.95111C2.54818 8.47845 2.4738 7.97331 2.50751 7.46956C2.54123 6.9658 2.68225 6.47508 2.92114 6.03029C3.16003 5.5855 3.49125 5.19692 3.89261 4.89062C4.29396 4.58432 4.75616 4.36737 5.24822 4.25431C5.74028 4.14126 6.25083 4.13472 6.74563 4.23513C7.24042 4.33553 7.70803 4.54057 8.1171 4.83649C8.52617 5.13241 8.86724 5.51237 9.11745 5.95089H10.0491C10.2993 5.51237 10.6404 5.13241 11.0495 4.83649C11.4585 4.54057 11.9261 4.33553 12.4209 4.23513C12.9157 4.13472 13.4263 4.14126 13.9183 4.25431C14.4104 4.36737 14.8726 4.58432 15.274 4.89062C15.6753 5.19692 16.0065 5.5855 16.2454 6.03029C16.4843 6.47508 16.6253 6.9658 16.659 7.46956C16.6928 7.97331 16.6184 8.47845 16.4409 8.95111C16.2634 9.42376 15.9869 9.85301 15.6299 10.2101L9.58328 16.2584L3.53661 10.2109V10.2101ZM16.2183 10.8017C16.6451 10.3749 16.9789 9.8644 17.1988 9.30231C17.4188 8.74022 17.52 8.1387 17.4962 7.53558C17.4723 6.93247 17.324 6.34081 17.0604 5.79781C16.7968 5.25481 16.4238 4.77223 15.9647 4.3804C15.5055 3.98858 14.9703 3.696 14.3926 3.52105C13.815 3.34611 13.2073 3.29259 12.608 3.36386C12.0086 3.43513 11.4305 3.62965 10.9099 3.93519C10.3894 4.24072 9.93771 4.65066 9.58328 5.13923C9.22885 4.65066 8.77716 4.24072 8.25662 3.93519C7.73608 3.62965 7.15795 3.43513 6.55859 3.36386C5.95923 3.29259 5.35161 3.34611 4.77393 3.52105C4.19626 3.696 3.66103 3.98858 3.20191 4.3804C2.74279 4.77223 2.36972 5.25481 2.10615 5.79781C1.84258 6.34081 1.69422 6.93247 1.6704 7.53558C1.64658 8.1387 1.74781 8.74022 1.96773 9.30231C2.18765 9.8644 2.5215 10.3749 2.94828 10.8017L9.58328 17.4359L16.2183 10.8026V10.8017Z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="checkout-item__controls-item js-checkout-delete">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="mdi-light:delete">
+                      <path id="Vector"
+                            d="M14.9997 15.8333C14.9997 16.4964 14.7363 17.1323 14.2674 17.6011C13.7986 18.0699 13.1627 18.3333 12.4997 18.3333H6.66634C6.0033 18.3333 5.36742 18.0699 4.89857 17.6011C4.42973 17.1323 4.16634 16.4964 4.16634 15.8333V5.83333H3.33301V3.33333H7.08301L7.91634 2.5H11.2497L12.083 3.33333H15.833V5.83333H14.9997V15.8333ZM4.99967 5.83333V15.8333C4.99967 16.2754 5.17527 16.6993 5.48783 17.0118C5.80039 17.3244 6.22431 17.5 6.66634 17.5H12.4997C12.9417 17.5 13.3656 17.3244 13.6782 17.0118C13.9907 16.6993 14.1663 16.2754 14.1663 15.8333V5.83333H4.99967ZM14.9997 5V4.16667H11.6663L10.833 3.33333H8.33301L7.49967 4.16667H4.16634V5H14.9997ZM6.66634 7.5H7.49967V15.8333H6.66634V7.5ZM11.6663 7.5H12.4997V15.8333H11.6663V7.5Z"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+              <div class="checkout-item__btns">
+                <div class="single-product-controls__price-range">
+                  <span class="single-product-controls__price-new">2 000 ₽</span>
+                  <span class="single-product-controls__price-old">3 500 ₽</span>
+                </div>
+                <div class="checkout-item__qty">
+                  <div class="single-product-controls__qty-title">Количество:</div>
+                  <div class="single-product-controls__qty-form">
+                    <a href="#" class="single-product-controls__qty-btn js-minus-product">-</a>
+                    <input type="number" name="qty" id="qty" class="single-product-controls__qty-value" value="1"
+                           min="1"
+                           step="1">
+                    <a href="#" class="single-product-controls__qty-btn js-plus-product">+</a>
+                  </div>
+                  <div class="single-product-controls__qty-text">В наличии 100 единиц</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-item__text">
+            <div class="checkout-item__title">Название товара. Гармония диссонирует мифологический феномер психической
+              мутации, что связано с чем
+            </div>
+            <div class="checkout-item__options">
+              <div class="checkout-item-option">
+                <div class="checkout-item-option__title">Характеристики товара</div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Характеристика 1:</div>
+                  <div class="checkout-item-option__value">Свойство 1</div>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Характеристика 2:</div>
+                  <div class="checkout-item-option__value">Свойство 2</div>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Персональная характеристика:</div>
+                  <div class="checkout-item-option__value">Свойство 2</div>
+                </div>
+              </div>
+              <div class="checkout-item-option">
+                <div class="checkout-item-option__title">Выбери способ доставки</div>
+                <div class="custom-select" style="background-color: #FDFDFD">
+                  <select name="delivery" id="delivery" title="способ доставки">
+                    <option value="0">По умолчанию самая быстрая</option>
+                    <option value="1">CDEK</option>
+                    <option value="2">Почта России</option>
+                    <option value="3">Вариант #3</option>
+                  </select>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Стоимость доставки:</div>
+                  <div class="checkout-item-option__value checkout-item-option__red">Бесплатна доставка</div>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Срок доставки:</div>
+                  <div class="checkout-item-option__value">10-12 дней</div>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Срок отправления:</div>
+                  <div class="checkout-item-option__value">2-3 дня</div>
+                  <div class="checkout-item-option__question">
+                    <img src="img/checkout/icon-info-red.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-item-option">
+                <div class="checkout-item-option__title">Выбери способ доставки</div>
+                <textarea name="comment-1" id="comment-1" class="checkout-item-option__txtarea"
+                          placeholder="При необходимости добавьте примечание к товару"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="checkout-item" data-index="1">
+          <div class="checkout-item__visual">
+            <div class="checkout-item__visual-img">
+              <label class="checkout-item__checkbox">
+                <input type="checkbox" name="product-2" id="product-2" checked>
+                <span></span>
+              </label>
+              <img src="img/checkout/product-1.jpg" alt="product name">
+            </div>
+            <div class="checkout-item__visual-info">
+              <div class="checkout-item__controls">
+                <a href="#" class="checkout-item__controls-item">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.50033 17.155L5.48866 14.1667H15.0003C15.4424 14.1667 15.8663 13.9911 16.1788 13.6785C16.4914 13.366 16.667 12.942 16.667 12.5V5C16.667 4.55797 16.4914 4.13405 16.1788 3.82149C15.8663 3.50893 15.4424 3.33333 15.0003 3.33333H4.16699C3.72496 3.33333 3.30104 3.50893 2.98848 3.82149C2.67592 4.13405 2.50033 4.55797 2.50033 5V17.155ZM2.50033 18.3333H1.66699V5C1.66699 4.33696 1.93038 3.70107 2.39923 3.23223C2.86807 2.76339 3.50395 2.5 4.16699 2.5H15.0003C15.6634 2.5 16.2993 2.76339 16.7681 3.23223C17.2369 3.70107 17.5003 4.33696 17.5003 5V12.5C17.5003 13.163 17.2369 13.7989 16.7681 14.2678C16.2993 14.7366 15.6634 15 15.0003 15H5.83366L2.50033 18.3333ZM5.00033 5.83333H14.167V6.66667H5.00033V5.83333ZM5.00033 8.33333H14.167V9.16667H5.00033V8.33333ZM5.00033 10.8333H11.667V11.6667H5.00033V10.8333Z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="checkout-item__controls-item">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.53661 10.2101C3.17966 9.85301 2.90316 9.42376 2.72567 8.95111C2.54818 8.47845 2.4738 7.97331 2.50751 7.46956C2.54123 6.9658 2.68225 6.47508 2.92114 6.03029C3.16003 5.5855 3.49125 5.19692 3.89261 4.89062C4.29396 4.58432 4.75616 4.36737 5.24822 4.25431C5.74028 4.14126 6.25083 4.13472 6.74563 4.23513C7.24042 4.33553 7.70803 4.54057 8.1171 4.83649C8.52617 5.13241 8.86724 5.51237 9.11745 5.95089H10.0491C10.2993 5.51237 10.6404 5.13241 11.0495 4.83649C11.4585 4.54057 11.9261 4.33553 12.4209 4.23513C12.9157 4.13472 13.4263 4.14126 13.9183 4.25431C14.4104 4.36737 14.8726 4.58432 15.274 4.89062C15.6753 5.19692 16.0065 5.5855 16.2454 6.03029C16.4843 6.47508 16.6253 6.9658 16.659 7.46956C16.6928 7.97331 16.6184 8.47845 16.4409 8.95111C16.2634 9.42376 15.9869 9.85301 15.6299 10.2101L9.58328 16.2584L3.53661 10.2109V10.2101ZM16.2183 10.8017C16.6451 10.3749 16.9789 9.8644 17.1988 9.30231C17.4188 8.74022 17.52 8.1387 17.4962 7.53558C17.4723 6.93247 17.324 6.34081 17.0604 5.79781C16.7968 5.25481 16.4238 4.77223 15.9647 4.3804C15.5055 3.98858 14.9703 3.696 14.3926 3.52105C13.815 3.34611 13.2073 3.29259 12.608 3.36386C12.0086 3.43513 11.4305 3.62965 10.9099 3.93519C10.3894 4.24072 9.93771 4.65066 9.58328 5.13923C9.22885 4.65066 8.77716 4.24072 8.25662 3.93519C7.73608 3.62965 7.15795 3.43513 6.55859 3.36386C5.95923 3.29259 5.35161 3.34611 4.77393 3.52105C4.19626 3.696 3.66103 3.98858 3.20191 4.3804C2.74279 4.77223 2.36972 5.25481 2.10615 5.79781C1.84258 6.34081 1.69422 6.93247 1.6704 7.53558C1.64658 8.1387 1.74781 8.74022 1.96773 9.30231C2.18765 9.8644 2.5215 10.3749 2.94828 10.8017L9.58328 17.4359L16.2183 10.8026V10.8017Z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="checkout-item__controls-item js-checkout-delete">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="mdi-light:delete">
+                      <path id="Vector"
+                            d="M14.9997 15.8333C14.9997 16.4964 14.7363 17.1323 14.2674 17.6011C13.7986 18.0699 13.1627 18.3333 12.4997 18.3333H6.66634C6.0033 18.3333 5.36742 18.0699 4.89857 17.6011C4.42973 17.1323 4.16634 16.4964 4.16634 15.8333V5.83333H3.33301V3.33333H7.08301L7.91634 2.5H11.2497L12.083 3.33333H15.833V5.83333H14.9997V15.8333ZM4.99967 5.83333V15.8333C4.99967 16.2754 5.17527 16.6993 5.48783 17.0118C5.80039 17.3244 6.22431 17.5 6.66634 17.5H12.4997C12.9417 17.5 13.3656 17.3244 13.6782 17.0118C13.9907 16.6993 14.1663 16.2754 14.1663 15.8333V5.83333H4.99967ZM14.9997 5V4.16667H11.6663L10.833 3.33333H8.33301L7.49967 4.16667H4.16634V5H14.9997ZM6.66634 7.5H7.49967V15.8333H6.66634V7.5ZM11.6663 7.5H12.4997V15.8333H11.6663V7.5Z"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+              <div class="checkout-item__btns">
+                <div class="single-product-controls__price-range">
+                  <span class="single-product-controls__price-new">2 000 ₽</span>
+                  <span class="single-product-controls__price-old">3 500 ₽</span>
+                </div>
+                <div class="checkout-item__qty">
+                  <div class="single-product-controls__qty-title">Количество:</div>
+                  <div class="single-product-controls__qty-form">
+                    <a href="#" class="single-product-controls__qty-btn js-minus-product">-</a>
+                    <input type="number" name="qty2" id="qty2" class="single-product-controls__qty-value" value="1"
+                           min="1"
+                           step="1">
+                    <a href="#" class="single-product-controls__qty-btn js-plus-product">+</a>
+                  </div>
+                  <div class="single-product-controls__qty-text">В наличии 100 единиц</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-item__text">
+            <div class="checkout-item__title">Название товара. Гармония диссонирует мифологический феномер психической
+              мутации, что связано с чем
+            </div>
+            <div class="checkout-item__options">
+              <div class="checkout-item-option">
+                <div class="checkout-item-option__title">Характеристики товара</div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Характеристика 1:</div>
+                  <div class="checkout-item-option__value">Свойство 1</div>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Характеристика 2:</div>
+                  <div class="checkout-item-option__value">Свойство 2</div>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Персональная характеристика:</div>
+                  <div class="checkout-item-option__value">Свойство 2</div>
+                </div>
+              </div>
+              <div class="checkout-item-option">
+                <div class="checkout-item-option__title">Выбери способ доставки</div>
+                <div class="custom-select" style="background-color: #FDFDFD">
+                  <select name="delivery" id="delivery2" title="способ доставки">
+                    <option value="0">По умолчанию самая быстрая</option>
+                    <option value="1">CDEK</option>
+                    <option value="2">Почта России</option>
+                    <option value="3">Вариант #3</option>
+                  </select>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Стоимость доставки:</div>
+                  <div class="checkout-item-option__value">500 р.</div>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Срок доставки:</div>
+                  <div class="checkout-item-option__value">10-12 дней</div>
+                </div>
+                <div class="checkout-item-option__field">
+                  <div class="checkout-item-option__name">Срок отправления:</div>
+                  <div class="checkout-item-option__value">2-3 дня</div>
+                  <div class="checkout-item-option__question">
+                    <img src="img/checkout/icon-info-red.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-item-option">
+                <div class="checkout-item-option__title">Выбери способ доставки</div>
+                <textarea name="comment-2" id="comment-2" class="checkout-item-option__txtarea"
+                          placeholder="При необходимости добавьте примечание к товару"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkout__result checkout-result">
+        <div class="checkout-result__title">Стоимость</div>
+        <div class="checkout-result__items">
+          <div class="checkout-result-item" data-total="3300">
+            <div class="checkout-result-item__top">
+              <div class="checkout-result-item__name">Название товара этого ме...</div>
+              <div class="checkout-result-item__price">2 500 ₽</div>
+            </div>
+            <div class="checkout-result-item__bottom">
+              <div class="checkout-result-item__name">Доставка почтой</div>
+              <div class="checkout-result-item__price">800 ₽</div>
+            </div>
+          </div>
+          <div class="checkout-result-item" data-total="4700">
+            <div class="checkout-result-item__top">
+              <div class="checkout-result-item__name">Название товара будет до...</div>
+              <div class="checkout-result-item__price">3 500 ₽</div>
+            </div>
+            <div class="checkout-result-item__bottom">
+              <div class="checkout-result-item__name">Доставка CDEK</div>
+              <div class="checkout-result-item__price">1 200 ₽</div>
+            </div>
+          </div>
+        </div>
+        <div class="checkout-result__total">
+          <div class="checkout-result__total-text">Общая стоимость</div>
+          <div class="checkout-result__total-number"><span id="js-total" data-sum="8000">8 000</span> ₽</div>
+        </div>
+        <div class="checkout-result__delivery">
+          <div class="checkout-result__delivery-title">Доставка</div>
+          <div class="checkout-result__delivery-text">г. Москва, Рязанский пр-кт, д. 3 , кв 55</div>
+          <a href="#" class="checkout-result__delivery-link">Изменить</a>
+        </div>
+        <a href="#" class="btn-red checkout__buy">Купить</a>
+      </div>
+    </div>
+    <div class="checkout__recommend">
+      <h2 class="title">Рекомендуем</h2>
+      <div class="share-products">
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="product">
+            <div class="product__image">
+              <div class="product-like">
+                <img src="img/like.svg" alt="Like" class="product-like__img">
+              </div>
+              <img src="img/product-test.jpg" alt="prod name">
+            </div>
+            <div class="product__info">
+              <a href="#" class="product__title">Портмоне мужское</a>
+              <div class="product-master">
+                <div class="product-master__img"><img src="img/product-test-master.jpg" alt="master name"></div>
+                <a href="#" class="product-master__name">Мария Машкина</a>
+              </div>
+              <div class="product-price">
+                <div class="product-price__current">2 000 ₽</div>
+                <div class="product-price__old">3 500 ₽</div>
+              </div>
+              <div class="product-rating">
+                <img src="img/star-rating-outline.svg" alt="Stars" class="product-rating__icon">
+                <div class="product-rating__value">4.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer-menu">
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Покупателям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Доставка</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Оплата</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Производителям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Сколько стоит размещение</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Как мне увеличить продажи</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">О нас
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Цель проекта</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Наша команда</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Помощь
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="mailto:admin@admin.admin" class="footer-menu__link">Еmail</a>
+            </li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Политика</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/handler.js"></script>
+<script src="js/react/home.bundle.js"></script>
+
+</body>
+</html>

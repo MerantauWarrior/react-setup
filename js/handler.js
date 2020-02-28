@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //Close menu/category on fader click
   document.getElementsByClassName('fader')[0].addEventListener('click', function (event) {
     if (event.target === document.getElementsByClassName('fader')[0]) {
-      if(window.getComputedStyle(document.getElementsByClassName('menu')[0]).display !== 'none'){
+      if (window.getComputedStyle(document.getElementsByClassName('menu')[0]).display !== 'none') {
         document.getElementsByClassName('menu')[0].classList.remove('menu_opened');
       }
-      if(window.getComputedStyle(document.getElementsByClassName('header-top-menu')[0]).display !== 'none'){
+      if (window.getComputedStyle(document.getElementsByClassName('header-top-menu')[0]).display !== 'none') {
         document.getElementsByClassName('header-top-menu')[0].classList.remove('header-top-menu_opened');
       }
       document.getElementsByClassName('fader')[0].classList.remove('fader_active');
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     this.closest('.header-top-menu').classList.toggle('header-top-menu_opened');
     document.getElementsByClassName('fader')[0].classList.toggle('fader_active');
     document.getElementsByTagName('body')[0].classList.toggle('ovh');
-    if(window.getComputedStyle(document.getElementsByClassName('menu')[0]).display !== 'none'){
+    if (window.getComputedStyle(document.getElementsByClassName('menu')[0]).display !== 'none') {
       document.getElementsByClassName('menu')[0].classList.remove('menu_opened');
       document.getElementsByClassName('fader')[0].classList.add('fader_active');
       document.getElementsByTagName('body')[0].classList.add('ovh');
@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
     for (j = 1; j < selElmnt.length; j++) {
       c = document.createElement("DIV");
       c.innerHTML = selElmnt.options[j].innerHTML;
-      c.addEventListener("click", function(e) {
-        let y, i, k, s, h,f;
+      c.addEventListener("click", function (e) {
+        let y, i, k, s, h, f;
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         f = this.parentNode.parentNode.getElementsByTagName("form")[0];
         h = this.parentNode.previousSibling;
@@ -72,13 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
       b.appendChild(c);
     }
     x[i].appendChild(b);
-    a.addEventListener("click", function(e) {
+    a.addEventListener("click", function (e) {
       e.stopPropagation();
       closeAllSelect(this);
       this.nextSibling.classList.toggle("select-hide");
       this.classList.toggle("select_active");
     });
   }
+
   function closeAllSelect(elmnt) {
     let x, y, i, arrNo = [];
     x = document.getElementsByClassName("select-items");
@@ -96,6 +97,53 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
+
   document.addEventListener("click", closeAllSelect);
+
+  //Quantity
+  if (document.querySelectorAll('.js-plus-product, .js-minus-product').length !== 0) {
+    document.querySelectorAll('.js-plus-product, .js-minus-product').forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        let inp = this.parentNode.children[1];
+        let val = parseInt(inp.value);
+        if (this.classList.contains('js-plus-product')) {
+          inp.value = val + 1;
+        } else {
+          if (val > 1) {
+            inp.value = val - 1;
+          } else {
+            return false;
+          }
+        }
+      });
+    });
+  }
+  //Checkout
+  if (!Element.prototype.closest) {
+    Element.prototype.closest = function (css) {
+      let nodeE = this;
+      while (nodeE) {
+        if (nodeE.matches(css)) return nodeE;
+        else nodeE = nodeE.parentElement;
+      }
+      return null;
+    };
+  }
+  if (document.querySelectorAll('.checkout').length !== 0) {
+    document.querySelectorAll('.js-checkout-delete').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        let remId = parseInt(this.closest('.checkout-item').getAttribute('data-index'));
+        let productTotalPrice = parseInt(document.getElementsByClassName('checkout-result-item')[remId].getAttribute('data-total'));
+        let result = parseInt(document.getElementById('js-total').getAttribute('data-sum')) - productTotalPrice;
+        document.getElementById('js-total').setAttribute('data-sum', result);
+        document.getElementById('js-total').innerText = result;
+        document.getElementsByClassName('checkout-result-item')[remId].remove();
+        this.closest('.checkout-item').remove();
+        console.log(result);
+      });
+    });
+  }
 
 });
