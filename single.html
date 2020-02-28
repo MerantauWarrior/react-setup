@@ -210,7 +210,7 @@
           </div>
         </div>
       </form>
-      <button class="btn-red single-product-side" type="submit" form="single-product">Добавить в
+      <button class="btn-red single-product-side single-product__submit" type="submit" form="single-product">Добавить в
         корзину
       </button>
       <div class="single-product__tech single-product-side">
@@ -1155,7 +1155,7 @@
         $('.gallery-modal__next').hide();
       }
     });
-    $(document).on('click', function (event) {
+    $(document).on('click touchstart', function (event) {
       if (event.target === document.getElementById('modal')) {
         $('.gallery-modal').hide();
         $('body').removeClass('ovh');

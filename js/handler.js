@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  document.addEventListener('touchmove', function (event) {
+    if (event.scale !== 1) { event.preventDefault(); }
+  }, false);
   //Toggle footer mobile menu
   document.querySelectorAll('.footer-menu__title').forEach(function (title) {
     title.addEventListener('click', function () {
@@ -79,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.toggle("select_active");
     });
   }
-
   function closeAllSelect(elmnt) {
     let x, y, i, arrNo = [];
     x = document.getElementsByClassName("select-items");
@@ -97,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
-
   document.addEventListener("click", closeAllSelect);
 
   //Quantity
