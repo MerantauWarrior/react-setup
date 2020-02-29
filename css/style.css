@@ -1760,7 +1760,7 @@ input[type=number] {
     flex: 1;
     font-size: 14px;
     line-height: 17px;
-    color: #1A1A1A;
+    /*color: #1A1A1A;*/
 }
 .checkout-item__controls{
     display: flex;
@@ -1817,13 +1817,42 @@ input[type=number] {
 .checkout-item-option__question{
     position: relative;
     margin-left: 5px;
+}
+.checkout-item-option__question img{
     cursor: help;
 }
-.checkout-item-option .custom-select{
-    font-family:"SF Text light",sans-serif;
+.checkout-item-option__question-text{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -272px;
+    width: 265px;
+    padding: 13px 15px 10px 15px;
+    font-family:"SF Display light",sans-serif;
     font-size: 12px;
     line-height: 14px;
+    background-color: #fff;
+    -webkit-border-radius: 0 5px 5px 5px;
+    -moz-border-radius: 0 5px 5px 5px;
+    border-radius: 0 5px 5px 5px;
+    color: #1A1A1A;
 }
+.checkout-item-option__question-text:before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    top: 0;
+    left: -9px;
+}
+.checkout-item-option__question:hover .checkout-item-option__question-text{
+    display: block;
+}
+/*.checkout-item-option .custom-select{*/
+    /*font-family:"SF Text light",sans-serif;*/
+    /*font-size: 12px;*/
+    /*line-height: 14px;*/
+/*}*/
 .checkout-item-option__txtarea{
     display: block;
     width: 100%;
@@ -1831,9 +1860,11 @@ input[type=number] {
     padding: 10px;
     background-color: transparent;
     font-family:"SF Display light",sans-serif;
-    font-size: 12px;
-    line-height: 14px;
-    color: #1A1A1A;
+    /*font-size: 12px;*/
+    /*line-height: 14px;*/
+    font-size: 14px;
+    line-height: 17px;
+    /*color: #1A1A1A;*/
     border: 1px solid #C4C4C4;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -1841,20 +1872,24 @@ input[type=number] {
     resize: none;
 }
 .checkout-item-option__txtarea::-webkit-input-placeholder {
-    font-family: 'SF Text lightitalic',sans-serif;
-    color: #C4C4C4;
+    /*font-family: 'SF Text lightitalic',sans-serif;*/
+    /*color: #C4C4C4;*/
+    color: #000000;
 }
 .checkout-item-option__txtarea::-moz-placeholder {
-    font-family: 'SF Text lightitalic',sans-serif;
-    color: #C4C4C4;
+    /*font-family: 'SF Text lightitalic',sans-serif;*/
+    /*color: #C4C4C4;*/
+    color: #000000;
 }
 .checkout-item-option__txtarea:-ms-input-placeholder {
-    font-family: 'SF Text lightitalic',sans-serif;
-    color: #C4C4C4;
+    /*font-family: 'SF Text lightitalic',sans-serif;*/
+    /*color: #C4C4C4;*/
+    color: #000000;
 }
 .checkout-item-option__txtarea:-moz-placeholder {
-    font-family: 'SF Text lightitalic',sans-serif;
-    color: #C4C4C4;
+    /*font-family: 'SF Text lightitalic',sans-serif;*/
+    /*color: #C4C4C4;*/
+    color: #000000;
 }
 .checkout__result{
     width: 100%;

@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (elmnt == y[i]) {
         arrNo.push(i)
       } else {
-        y[i].classList.remove("select-arrow-active");
+        y[i].classList.remove("select_active");
       }
     }
     for (i = 0; i < x.length; i++) {
@@ -149,8 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let fixUnfixBtns = function () {
       if (window.matchMedia("(max-width: 767px) and (orientation: portrait)").matches) {
         window.addEventListener('scroll', function() {
-          let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
-          if (windowRelativeBottom > document.documentElement.clientHeight + 150){
+          if (document.documentElement.getBoundingClientRect().bottom > document.documentElement.clientHeight + 400){
             document.querySelectorAll('.checkout__buy, .single-product__submit')[0].classList.add('fixed-mobile');
           }else{
             document.querySelectorAll('.checkout__buy, .single-product__submit')[0].classList.remove('fixed-mobile');
