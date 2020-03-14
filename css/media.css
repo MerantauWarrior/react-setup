@@ -184,6 +184,17 @@
     .checkout__inner{
         justify-content: center;
     }
+    /*Seller Registration Page*/
+    .seller-registration-benefits-item{
+        width: 33%;
+    }
+    .seller-registration-intro__start{
+        max-width: 70%;
+    }
+    .seller-registration-intro__title{
+        text-align: left;
+        font-size: 24px;
+    }
 }
 @media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: landscape){
     /*Share*/
@@ -1047,11 +1058,83 @@
         font-size: 13px;
         line-height: 16px;
     }
+    /*Seller Registration Page*/
+    .seller-registration{
+        padding: 0;
+    }
+    .seller-registration__block{
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 90px;
+        padding: 0;
+    }
+    .seller-registration__bg{
+        position: static;
+    }
+    .seller-registration__box{
+        width: 100%;
+        height: auto;
+        margin-top: -40px;
+        padding: 25px 20px;
+    }
+    .seller-registration__title{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .seller-registration__text{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .seller-registration-benefits-item__title{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .seller-registration-benefits-item__text{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .seller-registration-benefits{
+        padding-top: 18px;
+        padding-bottom: 30px;
+    }
+    .seller-registration-benefits__items{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .seller-registration-benefits-item{
+        min-width: 320px;
+    }
+    .seller-registration-intro__description{
+        display: none;
+    }
+    .seller-registration-intro__title{
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    .seller-registration-intro{
+        height: 200px;
+    }
+    .seller-registration-window{
+        position: static;
+        top: 0;
+        left: 0;
+        padding: 0 15px;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    .seller-registration-window__close{
+        top: 15px;
+        right: 15px;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
     /*Checkout Page + Single Page Buy Buttons*/
     .checkout__buy.fixed-mobile,
+    /*Seller Registration Page*/
     .single-product__submit.fixed-mobile{
         position: fixed;
         width: 91%;
@@ -1060,6 +1143,9 @@
         left: 15px;
         right: 15px;
         z-index: 2;
+    }
+    .seller-registration-window-socials__item{
+        margin-right: 10px;
     }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape){

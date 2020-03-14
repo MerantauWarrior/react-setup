@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Seller Registration</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body class="ovh">
+<div class="fader"></div>
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__inner">
+        <div class="logo">
+          <a href="#"><img src="img/logo.svg" alt="Dalaran"></a>
+        </div>
+        <div class="search">
+          <a href="#" class="header-catalog-menu">Каталог</a>
+          <form action="" method="get" class="form-search">
+            <input type="text" name="search" id="search" class="inp-search">
+            <button class="btn-search" type="submit"></button>
+          </form>
+        </div>
+        <div class="header-top-menu">
+          <div class="header-top-menu__mobile"></div>
+          <div class="header-top-menu__inner">
+            <ul class="header-top-menu__list">
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать мастером</a></li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать покупателем</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-menu__link enter-link">
+                  <img src="img/enter.svg" class="enter-link__img">Вход
+                </a>
+              </li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">О нас</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-wishlist">
+                  <img src="img/wishlist.svg" class="header-top-wishlist__icon" alt="wishlist">
+                  <span class="header-top-wishlist__text">Избранное</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-top-controls">
+          <a href="#" class="header-top-basket">
+            <span class="header-top-basket__qty">2</span>
+            <img src="img/basket.svg" alt="basket" class="header-top-basket__icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="container">
+      <ul class="menu-list" id="MenuList"></ul>
+    </div>
+  </div>
+</header>
+
+<section class="intro seller-registration-intro">
+  <div class="intro__bg">
+    <img src="img/seller-registration/intro.jpg" alt="seller description">
+  </div>
+  <div class="container">
+    <div class="seller-registration-intro__start intro-start">
+      <div class="title seller-registration-intro__title">Преврати хобби в профессию на dalaran</div>
+      <div class="seller-registration-intro__description">Мы знаем насколько сложно зарабатывать на изготовлении товаров
+        своими руками, но мы хотим это изменить и сделать твою жизнь немного проще! Давай так, ты будешь производить
+        свои товары и отправлять их, а мы будем заниматься всем остальным. Подходит? Тогда жми "Стать мастером".
+      </div>
+      <a href="#sellerRegistraion" class="seller-registration__btn">Стать мастером</a>
+    </div>
+  </div>
+</section>
+
+<section class="seller-registration-benefits">
+  <div class="container">
+    <div class="seller-registration-benefits__items">
+      <div class="seller-registration-benefits-item">
+        <div class="seller-registration-benefits-item__icon">
+          <img src="img/seller-registration/seller-registration-benefits-1.svg" alt="">
+        </div>
+        <div class="seller-registration-benefits-item__title">Продавай бесплатно</div>
+        <div class="seller-registration-benefits-item__text">0 рублей за размещение!</div>
+      </div>
+      <div class="seller-registration-benefits-item">
+        <div class="seller-registration-benefits-item__icon">
+          <img src="img/seller-registration/seller-registration-benefits-1.svg" alt="">
+        </div>
+        <div class="seller-registration-benefits-item__title">Продавай легко</div>
+        <div class="seller-registration-benefits-item__text">Производи и отправляй,<br> остальное за нами!</div>
+      </div>
+      <div class="seller-registration-benefits-item">
+        <div class="seller-registration-benefits-item__icon">
+          <img src="img/seller-registration/seller-registration-benefits-1.svg" alt="">
+        </div>
+        <div class="seller-registration-benefits-item__title">Продавай эффективно</div>
+        <div class="seller-registration-benefits-item__text">Трать минимум времени на продажи!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seller-registration">
+  <div class="seller-registration__block">
+    <div class="seller-registration__bg"><img src="img/seller-registration/section-1.jpg" alt="" class=""></div>
+    <div class="container">
+      <div class="seller-registration__box">
+        <h2 class="seller-registration__title">Продавай бесплатно</h2>
+        <p class="seller-registration__text">Мы зарабатываем, лишь когда ты зарабатываешь. Ты устанавливаешь цену, а мы
+          берем комиссию за продажу сверх установленной цены, которую мы тратим на привлечение новых покупателей.</p>
+        <a href="#sellerRegistraion" class="seller-registration__btn">Стать мастером</a>
+      </div>
+    </div>
+  </div>
+  <div class="seller-registration__block seller-registration__block--reverse">
+    <div class="seller-registration__bg"><img src="img/seller-registration/section-2.jpg" alt="" class=""></div>
+    <div class="container">
+      <div class="seller-registration__box">
+        <h2 class="seller-registration__title">Продавай легко</h2>
+        <p class="seller-registration__text">Мы хотим сделать так, чтобы ты сфокусировался на производстве товаров и
+          продавал больше! Поэтому рекламу, оплату, процесс возврата и другое, мы берем на себя, тебе лишь остается
+          производить и отправлять. Чем больше ты будешь продавать, тем больше мы сможем инвестировать в упрощение
+          процесса продажи.</p>
+        <a href="#sellerRegistraion" class="seller-registration__btn">Стать мастером</a>
+      </div>
+    </div>
+  </div>
+  <div class="seller-registration__block">
+    <div class="seller-registration__bg"><img src="img/seller-registration/section-3.jpg" alt="" class=""></div>
+    <div class="container">
+      <div class="seller-registration__box">
+        <h2 class="seller-registration__title">Продавай эффективно</h2>
+        <p class="seller-registration__text">Сервисы, которые мы скоро запустим, помогут тебе эффективно управлять
+          магазином и повышать продажи.</p>
+        <a href="#sellerRegistraion" class="seller-registration__btn">Стать мастером</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer-menu">
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Покупателям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Доставка</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Оплата</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Производителям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Сколько стоит размещение</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Как мне увеличить продажи</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">О нас
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Цель проекта</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Наша команда</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Помощь
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="mailto:admin@admin.admin" class="footer-menu__link">Еmail</a>
+            </li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Политика</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="seller-registration-modal seller-registration-modal_opened">
+  <div class="seller-registration-window seller-registration-window--l " id="sr-buy">
+    <div class="seller-registration-window__close">
+      <img src="img/seller-registration/close-modal.svg" alt="">
+    </div>
+    <div class="seller-registration-window__buy">
+      <div class="seller-registration-modal__title seller-registration-modal__title-buy">Покупка без регистрации</div>
+      <form action="" method="get">
+        <div class="seller-registration-modal__cols">
+          <div class="seller-registration-modal__col">
+            <div class="seller-registration-modal__field">
+              <label for="a" class="seller-registration-modal__label">Почта</label>
+              <input type="email" name="a" id="a" class="seller-registration-modal__inp" placeholder="vashapochta@poсhta.com">
+            </div>
+            <div class="seller-registration-modal__field">
+              <label for="as" class="seller-registration-modal__label">Подтвердите почту</label>
+              <input type="email" name="as" id="as" class="seller-registration-modal__inp" placeholder="vashapochta@poсhta.com">
+            </div>
+            <div class="seller-registration-modal__field">
+              <label for="ds" class="seller-registration-modal__label">Ф.И.О.</label>
+              <input type="text" name="ds" id="ds" class="seller-registration-modal__inp"
+                     placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="seller-registration-modal__field">
+              <label for="qr" class="seller-registration-modal__label">Индекс</label>
+              <input type="text" name="qr" id="qr" class="seller-registration-modal__inp" placeholder="12345">
+            </div>
+          </div>
+          <div class="seller-registration-modal__col">
+            <div class="seller-registration-modal__field">
+              <label for="asd" class="seller-registration-modal__label">Регион</label>
+              <input type="text" name="asd" id="asd" class="seller-registration-modal__inp"
+                     placeholder="Ленинградская область">
+            </div>
+            <div class="seller-registration-modal__field">
+              <label for="sa" class="seller-registration-modal__label">Город</label>
+              <input type="text" name="sa" id="sa" class="seller-registration-modal__inp"
+                     placeholder="Санкт- Петербург">
+            </div>
+            <div class="seller-registration-modal__field">
+              <label for="faa" class="seller-registration-modal__label">Улица/дом/квартира</label>
+              <input type="text" name="faa" id="faa" class="seller-registration-modal__inp"
+                     placeholder="Улица/дом/квартира">
+            </div>
+            <div class="seller-registration-window__buy-btn">
+              <button class="seller-registration-modal__btn seller-registration-modal__btn--red" type="submit">Готово
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="js/handler.js"></script>
+<script src="js/react/home.bundle.js"></script>
+
+</body>
+</html>

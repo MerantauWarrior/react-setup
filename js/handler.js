@@ -168,5 +168,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  //Seller Registration Modals
+  if (document.querySelectorAll('.seller-registration-modal, .seller-registration__btn').length !== 0){
+    document.querySelectorAll('.seller-registration__btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        let modalName = this.getAttribute('href');
+        document.body.classList.add('ovh');
+        document.querySelectorAll('.seller-registration-window'+modalName)[0].closest('.seller-registration-modal').classList.add('seller-registration-modal_opened');
+      })
+    });
+    //Close Seller Registration on click
+    document.getElementsByClassName('seller-registration-modal')[0].addEventListener('click', function (event) {
+      if (event.target === document.getElementsByClassName('seller-registration-modal')[0]) {
+        document.getElementsByTagName('body')[0].classList.remove('ovh');
+        document.querySelectorAll('.seller-registration-modal')[0].classList.remove('seller-registration-modal_opened');
+      }
+    });
+    document.querySelectorAll('.seller-registration-window__close')[0].addEventListener('click', function () {
+      document.getElementsByTagName('body')[0].classList.remove('ovh');
+      document.querySelectorAll('.seller-registration-modal')[0].classList.remove('seller-registration-modal_opened');
+    })
+  }
 
 });

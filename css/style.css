@@ -1981,3 +1981,344 @@ input[type=number] {
     height: 43px;
     margin-top: 26px;
 }
+/*--- SELLER REGISTRATION ---*/
+.seller-registration-intro__start{
+    width: 800px;
+    padding-right: 30px;
+    background-color: #F04650;
+}
+.seller-registration-intro__title{
+    color: #ffffff;
+}
+.seller-registration-intro__description{
+    margin: 15px 0 20px 0;
+    font-family: "SF Display light",sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+}
+.seller-registration-benefits{
+    padding-top: 67px;
+}
+.seller-registration-benefits__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.seller-registration-benefits-item{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 370px;
+}
+.seller-registration-benefits-item__icon{
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 11px 17px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 0 11px 17px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 11px 17px rgba(0, 0, 0, 0.04);
+}
+.seller-registration-benefits-item__title{
+    margin: 15px 0 10px 0;
+    font-family:"SF Text meduim",sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1A1A1A;
+}
+.seller-registration-benefits-item__text{
+    font-family:"SF Text light",sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #1A1A1A;
+}
+.seller-registration{
+    padding-bottom: 44px;
+}
+.seller-registration__block{
+    position: relative;
+    height: 400px;
+    margin-top: 80px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+.seller-registration__bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.seller-registration__block--reverse .seller-registration__bg{
+    right: auto;
+    left: 0;
+}
+.seller-registration__box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 570px;
+    height: 320px;
+    padding: 30px;
+    background-color: #F04650;
+    z-index: 2;
+}
+.seller-registration__block--reverse .seller-registration__box{
+    margin-left: auto;
+}
+.seller-registration__title{
+    margin: 0;
+    font-family: "SF Text meduim",sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.seller-registration__text{
+    margin: 15px 0 20px 0;
+    font-family: "SF Text light",sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F9F9F9;
+}
+.seller-registration__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 57px;
+    background-color: #fff;
+    border: 2px solid #F04650;
+    -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-family: "SF Display semibold",sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F04650;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+}
+.seller-registration__btn:hover{
+    border: 2px solid #ffffff;
+    background-color: #F04650;
+    color: #ffffff;
+}
+.seller-registration-modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    z-index: 99;
+}
+.seller-registration-modal_opened{
+    display: block;
+}
+.seller-registration-window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 434px;
+    padding: 0 30px;
+    background-color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0 15px 37px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 15px 37px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 15px 37px rgba(0, 0, 0, 0.08);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.seller-registration-modal__title{
+    font-family: "SF Display semibold",sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    color: #1A1A1A;
+}
+.seller-registration-modal__field{
+    margin-bottom: 15px;
+}
+.seller-registration-modal__label{
+    display: inline-block;
+    margin-bottom: 6px;
+    font-family: "SF Text regular",sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+.seller-registration-modal__inp{
+    width: 100%;
+    height: 46px;
+    padding: 14px 10px;
+    border: 1px solid #C4C4C4;
+    font-family: "SF Text lightitalic",sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+}
+.seller-registration-modal__inp::-webkit-input-placeholder {
+    color: #CECECE;
+}
+.seller-registration-modal__inp::-moz-placeholder {
+    color: #CECECE;
+}
+.seller-registration-modal__inp:-ms-input-placeholder {
+    color: #CECECE;
+}
+.seller-registration-modal__inp:-moz-placeholder {
+    color: #CECECE;
+}
+.seller-registration-modal__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+    padding: 0;
+    font-family: "SF Display semibold",sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    border: none;
+    cursor: pointer;
+}
+.seller-registration-modal__btn--red{
+    color: #F9F9F9;
+    background-color: #F04650;
+    border: 1px solid #FFFFFF;
+}
+.seller-registration-modal__btn--red:hover{
+    color: #F04650;
+    background-color: #FFFFFF;
+    border: 1px solid #F04650;
+}
+.seller-registration-modal__btn--white{
+    color: #F04650;
+    background-color: #ffffff;
+    border: 1px solid #F04650;
+}
+.seller-registration-modal__btn--white:hover{
+    color: #ffffff;
+    background-color: #F04650;
+}
+.seller-registration-window__address{
+    padding: 34px 0 36px 0;
+}
+.seller-registration-modal__title--address{
+    margin-bottom: 24px;
+}
+.seller-registration-window__address-btn{
+    margin-top: 30px;
+}
+.seller-registration-window__noreg{
+    padding: 34px 0 40px 0;
+}
+.seller-registration-window__noreg-reg{
+    margin: 20px 0;
+}
+.seller-registration-window__text-after{
+    margin-top: 15px;
+    font-family:"SF Display light",sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    color: #1A1A1A;
+}
+.seller-registration-window-socials__title{
+    margin-bottom: 10px;
+    font-family:"SF Display light",sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1A1A1A;
+}
+.seller-registration-window-socials__items{
+    display: flex;
+    flex-wrap: wrap;
+}
+.seller-registration-window-socials__item{
+    margin-right: 16px;
+}
+.seller-registration-window-socials__item:last-child{
+    margin-right: 0;
+}
+.seller-registration-window__noreg-guest{
+    margin: 15px 0 40px 0;
+}
+.seller-registration-modal__title--noreg{
+    margin-bottom: 10px;
+}
+.seller-registration-window__reg{
+    padding: 28px 0 39px 0;
+}
+.seller-registration-modal__title--reg{
+    margin-bottom: 20px;
+}
+.seller-registration-window__finish{
+    padding: 25px 0 35px 0;
+}
+.seller-registration-window__finish-text{
+    margin: 12px 0 19px 0;
+    font-family:"SF Display light",sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1A1A1A;
+}
+.seller-registration-window--l{
+    max-width: 830px;
+}
+.seller-registration-window__buy{
+    padding: 38px 0 36px 0;
+}
+.seller-registration-modal__title-buy{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.seller-registration-modal__cols{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.seller-registration-modal__col{
+    width: 100%;
+    max-width: 370px;
+}
+.seller-registration-window__buy-btn{
+    margin-top: 29px;
+}
+.seller-registration-window__close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
