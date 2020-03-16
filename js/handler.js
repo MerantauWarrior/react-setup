@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         let modalName = this.getAttribute('href');
-        document.body.classList.add('ovh');
+        document.getElementsByTagName('body')[0].classList.add('ovh');
         document.querySelectorAll('.seller-registration-window'+modalName)[0].closest('.seller-registration-modal').classList.add('seller-registration-modal_opened');
       })
     });
