@@ -29,7 +29,7 @@ export default class Select extends React.Component {
     });
   }
 
-  updateSelection(selection, value) {
+  updateSelection(selection, value, event) {
     let tagret = event.target.parentElement.parentElement.children[0];
     let that = this;
     window.onclick = function(event) {
@@ -65,7 +65,7 @@ export default class Select extends React.Component {
             return (
               <div
                 key={`react-custom-select-${key}`}
-                onClick={() => this.updateSelection(key, option.value)}
+                onClick={() => this.updateSelection(key, option.value, event)}
               >
                 {option.text}
               </div>
