@@ -65,7 +65,7 @@ export default class Select extends React.Component {
             return (
               <div
                 key={`react-custom-select-${key}`}
-                onClick={() => this.updateSelection(key, option.value, event)}
+                onClick={(event) => this.updateSelection(key, option.value, event)}
               >
                 {option.text}
               </div>
