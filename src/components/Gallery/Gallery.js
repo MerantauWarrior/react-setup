@@ -10,8 +10,8 @@ class Gallery extends Component {
     modal: false
   };
 
-  itemClickHandler = (number) => {
-    event.preventDefault();
+  itemClickHandler = (event, number) => {
+    event.nativeEvent.preventDefault();
     this.setState({modalItem: number, modal: true});
   };
 
