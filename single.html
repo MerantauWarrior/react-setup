@@ -161,7 +161,7 @@
             <div class="single-product-controls__qty-form">
               <a href="#" class="single-product-controls__qty-btn js-minus-product">-</a>
               <input type="number" name="qty" id="qty" class="single-product-controls__qty-value" value="1" min="1"
-                     step="1">
+                     step="1" readonly>
               <a href="#" class="single-product-controls__qty-btn js-plus-product">+</a>
             </div>
             <div class="single-product-controls__qty-text">В наличии 100 единиц</div>
@@ -329,20 +329,20 @@
             </div>
           </div>
           <div class="single-product-feedback__gallery">
-            <a href="#" class="single-product-feedback__gallery-item" data-src="img/single/single-gallery-big-1.jpg"
+            <a href="#" class="single-product-feedback__gallery-item js-gallery-item" data-src="img/single/single-gallery-big-1.jpg"
                rel="group-1">
               <img
                       src="img/single/feedback-photo-1.jpg"
                       alt=""></a>
-            <a href="#" class="single-product-feedback__gallery-item" data-src="img/single/feedback-photo-2.jpg"
+            <a href="#" class="single-product-feedback__gallery-item js-gallery-item" data-src="img/single/feedback-photo-2.jpg"
                rel="group-1">
               <img src="img/single/feedback-photo-2.jpg"
                    alt=""></a>
-            <a href="#" class="single-product-feedback__gallery-item" data-src="img/single/feedback-photo-3.jpg"
+            <a href="#" class="single-product-feedback__gallery-item js-gallery-item" data-src="img/single/feedback-photo-3.jpg"
                rel="group-1">
               <img src="img/single/feedback-photo-3.jpg"
                    alt=""></a>
-            <a href="#" class="single-product-feedback__gallery-item" data-src="img/single/feedback-photo-4.jpg"
+            <a href="#" class="single-product-feedback__gallery-item js-gallery-item" data-src="img/single/feedback-photo-4.jpg"
                rel="group-1">
               <img src="img/single/feedback-photo-4.jpg"
                    alt=""></a>
@@ -369,10 +369,11 @@
             </div>
           </div>
           <div class="single-product-feedback__gallery">
-            <a href="#" class="single-product-feedback__gallery-item" data-src="img/single/single-gallery-big-1.jpg"
+            <a href="#" class="single-product-feedback__gallery-item js-gallery-item"
+               data-src="img/single/single-gallery-big-1.jpg"
                rel="group-2"><img src="img/single/feedback-photo-5.jpg"
                                   alt=""></a>
-            <a href="#" class="single-product-feedback__gallery-item" data-src="img/single/feedback-photo-2.jpg"
+            <a href="#" class="single-product-feedback__gallery-item js-gallery-item" data-src="img/single/feedback-photo-2.jpg"
                rel="group-2"><img src="img/single/feedback-photo-2.jpg"
                                   alt=""></a>
           </div>
@@ -1122,62 +1123,62 @@
       focusOnSelect: true
     });
     //Modal
-    let group;
-    let active;
-    let i = 0;
-    $('.single-product-feedback__gallery-item').click(function (e) {
-      e.preventDefault();
-      group = [];
-      active = [];
-      $('.single-product-feedback__gallery-item[rel="' + $(this).attr('rel') + '"]').each(function () {
-        group.push($(this).attr('data-src'));
-      });
-      let srcImg = $(this).attr('data-src');
-      active.push(srcImg);
-      i = parseInt(group.indexOf(active[0]));
-      if(i < 1){
-        $('.gallery-modal__prev').hide();
-      }else {
-        $('.gallery-modal__prev').show();
-      }
-      if(i < group.length-1){
-        $('.gallery-modal__next').show();
-      }else{
-        $('.gallery-modal__next').hide();
-      }
-      $('body').addClass('ovh');
-      $('.gallery-modal').show();
-      $('.gallery-modal__item').attr('src', srcImg);
-    });
-    $('.gallery-modal__prev, .gallery-modal__next').click(function (e) {
-      e.preventDefault();
-      i = parseInt(group.indexOf(active[0]));
-      if($(this).hasClass('gallery-modal__prev')){
-        i--;
-        active[0] = group[i];
-        $('.gallery-modal__item').attr('src', group[i]);
-      }else {
-        i++;
-        active[0] = group[i];
-        $('.gallery-modal__item').attr('src', group[i]);
-      }
-      if(i < 1){
-        $('.gallery-modal__prev').hide();
-      }else {
-        $('.gallery-modal__prev').show();
-      }
-      if(i < group.length-1){
-        $('.gallery-modal__next').show();
-      }else{
-        $('.gallery-modal__next').hide();
-      }
-    });
-    $(document).on('click touchstart', function (event) {
-      if (event.target === document.getElementById('modal')) {
-        $('.gallery-modal').hide();
-        $('body').removeClass('ovh');
-      }
-    });
+//    let group;
+//    let active;
+//    let i = 0;
+//    $('.single-product-feedback__gallery-item').click(function (e) {
+//      e.preventDefault();
+//      group = [];
+//      active = [];
+//      $('.single-product-feedback__gallery-item[rel="' + $(this).attr('rel') + '"]').each(function () {
+//        group.push($(this).attr('data-src'));
+//      });
+//      let srcImg = $(this).attr('data-src');
+//      active.push(srcImg);
+//      i = parseInt(group.indexOf(active[0]));
+//      if(i < 1){
+//        $('.gallery-modal__prev').hide();
+//      }else {
+//        $('.gallery-modal__prev').show();
+//      }
+//      if(i < group.length-1){
+//        $('.gallery-modal__next').show();
+//      }else{
+//        $('.gallery-modal__next').hide();
+//      }
+//      $('body').addClass('ovh');
+//      $('.gallery-modal').show();
+//      $('.gallery-modal__item').attr('src', srcImg);
+//    });
+//    $('.gallery-modal__prev, .gallery-modal__next').click(function (e) {
+//      e.preventDefault();
+//      i = parseInt(group.indexOf(active[0]));
+//      if($(this).hasClass('gallery-modal__prev')){
+//        i--;
+//        active[0] = group[i];
+//        $('.gallery-modal__item').attr('src', group[i]);
+//      }else {
+//        i++;
+//        active[0] = group[i];
+//        $('.gallery-modal__item').attr('src', group[i]);
+//      }
+//      if(i < 1){
+//        $('.gallery-modal__prev').hide();
+//      }else {
+//        $('.gallery-modal__prev').show();
+//      }
+//      if(i < group.length-1){
+//        $('.gallery-modal__next').show();
+//      }else{
+//        $('.gallery-modal__next').hide();
+//      }
+//    });
+//    $(document).on('click touchstart', function (event) {
+//      if (event.target === document.getElementById('modal')) {
+//        $('.gallery-modal').hide();
+//        $('body').removeClass('ovh');
+//      }
+//    });
   });
 </script>
 

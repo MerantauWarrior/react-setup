@@ -190,5 +190,69 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll('.seller-registration-modal')[0].classList.remove('seller-registration-modal_opened');
     })
   }
+  //Gallery Modal
+  if (document.querySelectorAll('.gallery-modal, .js-gallery-item').length !== 0){
+    let group;
+    let active;
+    let n = 0;
+    document.querySelectorAll('.js-gallery-item').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        group = [];
+        active = [];
+        document.querySelectorAll('.js-gallery-item[rel="' + this.getAttribute('rel') + '"]').forEach(function (el, i) {
+          let src = el.getAttribute('data-src');
+          group.push(src);
+        });
+        let srcImg = this.getAttribute('data-src');
+        active.push(srcImg);
+        n = parseInt(group.indexOf(active[0]));
+        if(n < 1){
+          document.querySelectorAll('.gallery-modal__prev')[0].style.display = 'none';
+        }else {
+          document.querySelectorAll('.gallery-modal__prev')[0].style.display = 'block';
+        }
+        if(n < group.length-1){
+          document.querySelectorAll('.gallery-modal__next')[0].style.display = 'block';
+        }else{
+          document.querySelectorAll('.gallery-modal__next')[0].style.display = 'none';
+        }
+        document.getElementsByTagName('body')[0].classList.add('ovh');
+        document.querySelectorAll('.gallery-modal')[0].style.display = 'block';
+        document.querySelectorAll('.gallery-modal__item')[0].setAttribute('src', srcImg);
+      })
+    });
+    document.querySelectorAll('.gallery-modal__prev, .gallery-modal__next').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        n = parseInt(group.indexOf(active[0]));
+        if(this.classList.contains('gallery-modal__prev')){
+          n--;
+          active[0] = group[n];
+          document.querySelectorAll('.gallery-modal__item')[0].setAttribute('src', group[n]);
+        }else {
+          n++;
+          active[0] = group[n];
+          document.querySelectorAll('.gallery-modal__item')[0].setAttribute('src', group[n]);
+        }
+        if(n < 1){
+          document.querySelectorAll('.gallery-modal__prev')[0].style.display = 'none';
+        }else {
+          document.querySelectorAll('.gallery-modal__prev')[0].style.display = 'block';
+        }
+        if(n < group.length-1){
+          document.querySelectorAll('.gallery-modal__next')[0].style.display = 'block';
+        }else{
+          document.querySelectorAll('.gallery-modal__next')[0].style.display = 'none';
+        }
+      })
+    });
+    document.addEventListener('click', function (event) {
+      if (event.target === document.getElementById('modal')) {
+        document.querySelectorAll('.gallery-modal')[0].style.display = 'none';
+        document.getElementsByTagName('body')[0].classList.remove('ovh');
+      }
+    });
+  }
 
 });

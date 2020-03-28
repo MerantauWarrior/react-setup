@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Seller Cabinet</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+<div class="fader"></div>
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__inner">
+        <div class="logo">
+          <a href="#"><img src="img/logo.svg" alt="Dalaran"></a>
+        </div>
+        <div class="search">
+          <a href="#" class="header-catalog-menu">Каталог</a>
+          <form action="" method="get" class="form-search">
+            <input type="text" name="search" id="search" class="inp-search">
+            <button class="btn-search" type="submit"></button>
+          </form>
+        </div>
+        <div class="header-top-menu">
+          <div class="header-top-menu__mobile"></div>
+          <div class="header-top-menu__inner">
+            <ul class="header-top-menu__list">
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать мастером</a></li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать покупателем</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-menu__link enter-link">
+                  <img src="img/enter.svg" class="enter-link__img">Вход
+                </a>
+              </li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">О нас</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-wishlist">
+                  <img src="img/wishlist.svg" class="header-top-wishlist__icon" alt="wishlist">
+                  <span class="header-top-wishlist__text">Избранное</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-top-controls">
+          <a href="#" class="header-top-basket">
+            <span class="header-top-basket__qty">2</span>
+            <img src="img/basket.svg" alt="basket" class="header-top-basket__icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="container">
+      <ul class="menu-list" id="MenuList"></ul>
+    </div>
+  </div>
+</header>
+
+<section class="seller-cabinter">
+  <div class="container">
+    <h2 class="title title--seller-cabinter">Мой профиль</h2>
+    <div class="seller-cabinter__info">
+      <div class="seller-cabinter__avatar">
+        <img src="img/seller-cabinet/avatar.jpg" alt="user name">
+      </div>
+      <div class="seller-cabinter__info-row">
+        <div class="seller-cabinter__title">Ф.И.О/ Название магазина</div>
+        <div class="seller-cabinter__text">Фамилия Имя Отчество</div>
+      </div>
+      <div class="seller-cabinter__info-row">
+        <div class="seller-cabinter__title">Почта</div>
+        <div class="seller-cabinter__text">vashapocha@pochta.ru</div>
+      </div>
+      <div class="seller-cabinter__info-row">
+        <div class="seller-cabinter__title">Телефон</div>
+        <div class="seller-cabinter__text">+7(949) 485 45 45</div>
+      </div>
+      <div class="seller-cabinter__info-row">
+        <div class="seller-cabinter__title">Адрес</div>
+        <div class="seller-cabinter__text">102320 Московская область, г Красногорск, ул. Терехина, дом 3, ка 32</div>
+      </div>
+      <div class="seller-cabinter__info-row">
+        <div class="seller-cabinter__title">История</div>
+        <div class="seller-cabinter__text">Самонаблюдение гомогенно отражает депрессивный интеллект. Аномия откровенна.
+          Объект, конечно, выбирает девиантный закон, что вызвало развитие функционализма и сравнительно-психологических
+          исследований поведения. Психе интегрирует бихевиоризм, следовательно основной закон психофизики: ощущение
+          изменяется пропорционально логарифму раздражителя . Личность, несмотря на внешние воздействия, просветляет
+          экзистенциальный гомеостаз.
+        </div>
+      </div>
+      <div class="seller-cabinter__info-row">
+        <div class="seller-cabinter__title">Получение оплаты за товар</div>
+        <div class="seller-cabinter__text">ИП р/с 8482585222 или Карта XXXX...XX21</div>
+      </div>
+    </div>
+    <div class="seller-cabinter__gallery">
+      <div class="seller-cabinter__title">Галлерея</div>
+      <div class="seller-cabinter__gallery-items">
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-1.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-1.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-2.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-2.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-3.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-3.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-1.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-1.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-2.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-2.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-3.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-3.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-1.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-1.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-2.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-2.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-3.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-3.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-1.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-1.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-2.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-2.jpg" alt=""></a>
+        <a href="#" class="seller-cabinter__gallery-item js-gallery-item"
+           data-src="img/seller-cabinet/user-gallery-4.jpg"
+           rel="group-1"><img src="img/seller-cabinet/user-gallery-4.jpg" alt=""></a>
+      </div>
+    </div>
+    <div class="seller-cabinter__cover">
+      <div class="seller-cabinter__title">Обложка</div>
+      <div class="seller-cabinter__cover-img">
+        <img src="img/seller-cabinet/cover.jpg" alt="">
+      </div>
+    </div>
+    <div class="seller-cabinter__btn">
+      <a href="#" class="btn-red">Изменить</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer-menu">
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Покупателям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Доставка</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Оплата</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Производителям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Сколько стоит размещение</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Как мне увеличить продажи</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">О нас
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Цель проекта</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Наша команда</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Помощь
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="mailto:admin@admin.admin" class="footer-menu__link">Еmail</a>
+            </li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Политика</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="gallery-modal" id="modal">
+  <div class="gallery-modal__content">
+    <button class='gallery-modal__prev'>
+      <svg width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.4986 9.32203L1.79149 10.0291L2.4986 10.7362L10.2179 18.4555L10.0293 18.6441L1.41437 10.0291L10.0293 1.41421L10.2179 1.60278L2.4986 9.32203Z"
+              fill="#F04650" stroke="#F04650" stroke-width="2"/>
+      </svg>
+    </button>
+    <button class='gallery-modal__next'>
+      <svg width="13" height="21" viewBox="8 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+                d="M18.5014 11.678L19.2085 10.9709L18.5014 10.2638L10.7821 2.54449L10.9707 2.35593L19.5856 10.9709L10.9707 19.5858L10.7821 19.3972L18.5014 11.678Z"
+                fill="#F04650" stroke="#F04650" stroke-width="2"/>
+      </svg>
+    </button>
+    <img src="img/single/single-gallery-big-1.jpg" alt="" class='gallery-modal__item'/>
+  </div>
+</div>
+
+<script src="js/handler.js"></script>
+<script src="js/react/home.bundle.js"></script>
+
+</body>
+</html>

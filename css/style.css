@@ -140,7 +140,6 @@ a:hover {
     align-items: center;
     justify-content: space-between;
 }
-
 /*Product card*/
 .card-product {
     width: 200px;
@@ -2341,4 +2340,60 @@ input[type=number] {
 }
 .seller-registration-window__forgot-new{
     margin-top: 20px;
+}
+/*--- SELLER CABINET ---*/
+.seller-cabinter{
+    padding: 13px 0 124px 0;
+    background: #FDFDFD;
+}
+.seller-cabinter__info{
+    max-width: 470px;
+    margin-top: 40px;
+    color: #1A1A1A;
+}
+.seller-cabinter__avatar{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.seller-cabinter__info-row{
+    margin-bottom: 20px;
+}
+.seller-cabinter__title{
+    font-family:"SF Display regular",sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+}
+.seller-cabinter__text{
+    margin-top: 7px;
+    font-family:"SF Text light",sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+.seller-cabinter__gallery{
+    padding-top: 5px;
+}
+.seller-cabinter__gallery-items{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.seller-cabinter__gallery-item{
+    width: 170px;
+    margin: 10px;
+}
+.seller-cabinter__cover{
+    padding-top: 14px;
+}
+.seller-cabinter__cover-img{
+    margin-top: 13px;
+}
+.seller-cabinter__btn{
+    margin-top: 40px;
+    max-width: 330px;
 }
