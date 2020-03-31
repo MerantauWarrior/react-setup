@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import MenuItem from '../../components/MenuItem/MenuItem';
 
-import {MenuData} from '../../../dummyData';
+import {MenuData} from '../../dummyData';
 
 class Menu extends Component {
   state = {

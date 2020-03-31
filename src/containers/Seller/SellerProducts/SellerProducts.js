@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ProductItem from '../../../components/ProductItem/ProductItem';
 import Select from '../../../components/UI/Select/Select';
 
-import {CategotyProducts} from '../../../../dummyData';
+import {CategotyProducts} from '../../../dummyData';
 
 class Seller extends Component {
   state = {

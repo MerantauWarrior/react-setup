@@ -3,7 +3,7 @@ import ReactPaginate from 'react-paginate';
 
 import CategoryProducts from './CategoryProducts/CategoryProducts';
 import CategoryFilter from '../../components/CategoryFilter/CategoryFilter';
-import {CategotyProducts} from '../../../dummyData';
+import {CategotyProducts} from '../../dummyData';
 
 class Category extends Component {
   state = {

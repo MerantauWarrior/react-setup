@@ -195,6 +195,14 @@
         text-align: left;
         font-size: 24px;
     }
+    /*Seller Profile - Product pages*/
+    .seller-profile__values,
+    .seller-profile__values-full{
+        max-width: 400px;
+    }
+    .inp-gallery-uploaded{
+        margin-bottom: 20px;
+    }
 }
 @media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: landscape){
     /*Share*/
@@ -206,6 +214,10 @@
     /*Share*/
     .share-products{
         justify-content: center;
+    }
+    /*Seller Profile - Product pages*/
+    .seller-profile__labels{
+        max-width: 300px;
     }
 }
 @media screen and (min-width: 320px) and (max-width: 767px){
@@ -1114,7 +1126,7 @@
     .seller-registration-intro{
         height: 200px;
     }
-    .seller-registration-window:not(.seller-registration-window-sm){
+    .seller-registration-window:not(.window-sm){
         position: static;
         top: 0;
         left: 0;
@@ -1129,7 +1141,7 @@
         top: 15px;
         right: 15px;
     }
-    .seller-registration-window-sm{
+    .window-sm{
         position: relative;
     }
     /*--- Seller Cabinet ---*/
@@ -1180,6 +1192,15 @@
     .seller-cabinter__cover{
         padding-top: 5px;
     }
+    /*Seller Profile - Product pages*/
+    .seller-profile__labels{
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    .seller-product__block{
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
@@ -1197,6 +1218,21 @@
     }
     .seller-registration-window-socials__item{
         margin-right: 10px;
+    }
+    /*Seller Profile - Product pages*/
+    .inp-gallery-uploaded{
+        margin-right: 20px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .inp-seller--xs{
+        max-width: 150px;
+    }
+    .inp-seller--xs:first-child{
+        margin-bottom: 20px;
+    }
+    .inp-seller--xs+.inp-seller--xs{
+        margin-left: 0;
     }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape){

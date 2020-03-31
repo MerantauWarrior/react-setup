@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PopularMaster from '../../components/PopularMaster/PopularMaster';
 import InfiniteScroll from 'react-infinite-scroll-component'
 
-import {popularMasterData} from '../../../dummyData';
+import {popularMasterData} from '../../dummyData';
 
 class PopularMasters extends Component {
   state = {

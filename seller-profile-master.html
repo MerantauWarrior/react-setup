@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Seller Cabinet</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+<div class="fader"></div>
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__inner">
+        <div class="logo">
+          <a href="#"><img src="img/logo.svg" alt="Dalaran"></a>
+        </div>
+        <div class="search">
+          <a href="#" class="header-catalog-menu">Каталог</a>
+          <form action="" method="get" class="form-search">
+            <input type="text" name="search" id="search" class="inp-search">
+            <button class="btn-search" type="submit"></button>
+          </form>
+        </div>
+        <div class="header-top-menu">
+          <div class="header-top-menu__mobile"></div>
+          <div class="header-top-menu__inner">
+            <ul class="header-top-menu__list">
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать мастером</a></li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать покупателем</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-menu__link enter-link">
+                  <img src="img/enter.svg" class="enter-link__img">Вход
+                </a>
+              </li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">О нас</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-wishlist">
+                  <img src="img/wishlist.svg" class="header-top-wishlist__icon" alt="wishlist">
+                  <span class="header-top-wishlist__text">Избранное</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-top-controls">
+          <a href="#" class="header-top-basket">
+            <span class="header-top-basket__qty">2</span>
+            <img src="img/basket.svg" alt="basket" class="header-top-basket__icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="container">
+      <ul class="menu-list" id="MenuList"></ul>
+    </div>
+  </div>
+</header>
+
+<section class="seller-profile">
+  <div class="container">
+    <h2 class="title title--seller-cabinter">Мой профиль</h2>
+    <form action="" method="get" class="seller-profile__form" enctype="multipart/form-data">
+      <div class="seller-profile__block">
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Работаешь как магазин или мастер?</div>
+            <div class="seller-label-description">Выбери как ты будешь продвигать себя на dalaran, как мастер или
+              магазин.
+            </div>
+          </div>
+          <div class="seller-profile__values">
+            <label class="seller-profile__radio">
+              <input type="radio" name="regType" class="inp--filter-radio" value="master" checked>
+                <span class="filter-radio"></span>
+                <span class="filter-label__text">Мастер</span>
+            </label>
+            <label class="seller-profile__radio">
+              <input type="radio" name="regType" class="inp--filter-radio" value="shop">
+                <span class="filter-radio"></span>
+                <span class="filter-label__text">Магазин</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="seller-profile__block seller-profile__block--sm">
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Введи свои данные</div>
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Имя</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Иван">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Фамилия</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Иванов">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Отчество</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Иванов">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Почта</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="vashapochta@pohta.com">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label class="seller-label-title">Номер телефона</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="+7 (XXX) XXX XX XX">
+          </div>
+        </div>
+      </div>
+      <div class="seller-profile__block">
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Введи адрес отправки товара</div>
+            <div class="seller-label-description">Информация необходима для расчета сроков доставки.</div>
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Индекс</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Индекс">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Регион</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Регион">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Город</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Город">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Улица</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Улица">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Дом</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Дом">
+          </div>
+        </div>
+      </div>
+      <div class="seller-profile__block">
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Получение оплаты за товар</div>
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label class="seller-label-title">Способ получения оплаты</label>
+          </div>
+          <div class="seller-profile__values">
+            <div class="custom-select" style="background-color: #FDFDFD;">
+              <select name="" id="">
+                <option value="1" selected>Карта</option>
+                <option value="2">голубь</option>
+                <option value="3">почта</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Номер карты</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Номер карты">
+          </div>
+        </div>
+      </div>
+      <div class="seller-profile__block">
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Загрузи фото и расскажи о себе</div>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="avatar" class="seller-label-title">Загрузи фото</label>
+            <div class="seller-label-description">У мастеров с фото, на 78% чаще покупают товары.</div>
+          </div>
+          <div class="seller-profile__values">
+            <input type="file" name="" id="avatar" accept="image/*">
+            <label for="avatar" class="inp-avatar">
+              <span class="inp-avatar__icon">
+                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 14.7397V2.48968L14.25 7.73968L15 7.07568L8.5 0.575684L2 7.07568L2.75 7.73968L8 2.48968V14.7397H9ZM0 15.5757H1V17.5757H16V15.5757H17V18.5757H0V15.5757Z"
+                        fill="#F04650"/>
+                </svg>
+              </span>
+              <span class="inp-avatar__text">Кликните для загрузки фото.<br> Идеальный размер 200*200.</span>
+            </label>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Твоя история</label>
+            <div class="seller-label-description">Покупателям нравится слышать о личной истории мастеров и о процессе
+              производства. Раскройся перед покупателем, это сильно повысит доверие к тебе!
+            </div>
+          </div>
+          <div class="seller-profile__values">
+            <textarea name="" id="" class="txt-seller" placeholder="Расскажи о себе!"></textarea>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="cover" class="seller-label-title">Обложка для профиля</label>
+            <div class="seller-label-description">Главное фото на твоей странице.</div>
+          </div>
+          <div class="seller-profile__values">
+            <input type="file" name="" id="cover" accept="image/*">
+            <label for="cover" class="inp-cover">
+              <span class="inp-avatar__icon">
+                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 14.7397V2.48968L14.25 7.73968L15 7.07568L8.5 0.575684L2 7.07568L2.75 7.73968L8 2.48968V14.7397H9ZM0 15.5757H1V17.5757H16V15.5757H17V18.5757H0V15.5757Z"
+                        fill="#F04650"/>
+                </svg>
+              </span>
+              <span class="inp-avatar__text">Кликните для загрузки фото.<br> Идеальный размер 200*200.</span>
+            </label>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="gallery" class="seller-label-title">Фото производства и магазина</label>
+            <div class="seller-label-description">Сфотографируй свою мастерскую и все, что может помочь покупателям
+              лучше тебя узнать.
+            </div>
+          </div>
+          <div class="seller-profile__values seller-profile__values-full">
+            <input type="file" name="" id="gallery" accept="image/*" multiple>
+            <label for="gallery" class="inp-gallery">
+              <span class="inp-gallery__icon">
+                <img src="img/seller-profile/add-gallery-icon.svg" alt="Добавить фото">
+              </span>
+              <span class="inp-gallery__text">Добавить фото</span>
+            </label>
+            <div class="inp-gallery-uploaded">
+              <div class="inp-gallery-uploaded__close"></div>
+              <img src="img/seller-profile/gal-item-1.jpg" alt="">
+            </div>
+            <div class="inp-gallery-uploaded">
+              <div class="inp-gallery-uploaded__close"></div>
+              <img src="img/seller-profile/gal-item-1.jpg" alt="">
+            </div>
+            <div class="inp-gallery-uploaded">
+              <div class="inp-gallery-uploaded__close"></div>
+              <img src="img/seller-profile/gal-item-1.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Видео производства</label>
+            <div class="seller-label-description">Сохрани ссылку на видео процесса производства. Когда покупатель видит
+              процесс создания товара, доверие и желание купить изделие повышается.
+            </div>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Добавьте ссылку на видео">
+          </div>
+        </div>
+      </div>
+      <div class="seller-profile__btn">
+        <button class="btn-red">Сохранить</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer-menu">
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Покупателям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Доставка</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Оплата</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Производителям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Сколько стоит размещение</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Как мне увеличить продажи</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">О нас
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Цель проекта</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Наша команда</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Помощь
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="mailto:admin@admin.admin" class="footer-menu__link">Еmail</a>
+            </li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Политика</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/handler.js"></script>
+<script src="js/react/home.bundle.js"></script>
+
+</body>
+</html>

@@ -247,12 +247,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       })
     });
-    document.addEventListener('click', function (event) {
-      if (event.target === document.getElementById('modal')) {
+    function closeGallery(event) {
+      if (event.target === document.getElementById('modal') || event.which === 27 || event.keyCode === 27) {
         document.querySelectorAll('.gallery-modal')[0].style.display = 'none';
         document.getElementsByTagName('body')[0].classList.remove('ovh');
       }
+    }
+    document.addEventListener('click', function (event) {
+      closeGallery(event);
     });
+    document.addEventListener('touchstart', function (event) {
+      closeGallery(event);
+    });
+    document.addEventListener("keydown", function(event) {
+      closeGallery(event);
+    })
   }
 
 });

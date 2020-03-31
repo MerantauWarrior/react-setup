@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Seller Product</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+<div class="fader"></div>
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__inner">
+        <div class="logo">
+          <a href="#"><img src="img/logo.svg" alt="Dalaran"></a>
+        </div>
+        <div class="search">
+          <a href="#" class="header-catalog-menu">Каталог</a>
+          <form action="" method="get" class="form-search">
+            <input type="text" name="search" id="search" class="inp-search">
+            <button class="btn-search" type="submit"></button>
+          </form>
+        </div>
+        <div class="header-top-menu">
+          <div class="header-top-menu__mobile"></div>
+          <div class="header-top-menu__inner">
+            <ul class="header-top-menu__list">
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать мастером</a></li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">Стать покупателем</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-menu__link enter-link">
+                  <img src="img/enter.svg" class="enter-link__img">Вход
+                </a>
+              </li>
+              <li class="header-top-menu__item"><a href="#" class="header-top-menu__link">О нас</a></li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-wishlist">
+                  <img src="img/wishlist.svg" class="header-top-wishlist__icon" alt="wishlist">
+                  <span class="header-top-wishlist__text">Избранное</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-top-controls">
+          <a href="#" class="header-top-basket">
+            <span class="header-top-basket__qty">2</span>
+            <img src="img/basket.svg" alt="basket" class="header-top-basket__icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="container">
+      <ul class="menu-list" id="MenuList"></ul>
+    </div>
+  </div>
+</header>
+
+<section class="seller-product">
+  <div class="container">
+    <h2 class="title title--seller-cabinter">Новый товар</h2>
+    <form action="" method="get" class="seller-product__form" enctype="multipart/form-data">
+      <div class="seller-product__block">
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Категория товара</div>
+            <div class="seller-label-description">Не расстраивайся, если не нашел свою категорию. Добавь товар в
+              “Другое” и как похожих товаров станет много, мы создадим новую категорию.
+            </div>
+          </div>
+          <div class="seller-profile__values">
+            <div class="custom-select" style="background-color: #FDFDFD;">
+              <select name="" id="">
+                <option value="1" selected>Выбери категорию</option>
+                <option value="2">категорию1</option>
+                <option value="3">категорию2</option>
+              </select>
+            </div>
+            <div class="custom-select" style="background-color: #FDFDFD;">
+              <select name="" id="">
+                <option value="1" selected>Выбери подкатегорию</option>
+                <option value="2">подкатегорию1</option>
+                <option value="3">подкатегорию2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="seller-product__block">
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-block-title">Название магазина</label>
+            <div class="seller-label-description">Включи ключевые слова, которые покупатели будут использовать для
+              поиска товара.
+            </div>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Название товара">
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-block-title">Описание товара</label>
+            <div class="seller-label-description">Начни с краткого описание главных характеристик товара, а после добавь
+              подробное описание.
+            </div>
+          </div>
+          <div class="seller-profile__values">
+            <textarea name="" id="" class="txt-product" placeholder="Описание товара"></textarea>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label class="seller-block-title">Габариты и вес товара</label>
+          </div>
+          <div class="seller-profile__values seller-profile__values--sb">
+            <input type="text" name="" id="" class="inp-seller inp-seller--xs" placeholder="Вес (кг)">
+            <input type="text" name="" id="" class="inp-seller inp-seller--xs" placeholder="Длина (см)">
+            <input type="text" name="" id="" class="inp-seller inp-seller--xs" placeholder="Ширина (см)">
+            <input type="text" name="" id="" class="inp-seller inp-seller--xs" placeholder="Высота (см)">
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label class="seller-block-title">Материал товара</label>
+            <div class="seller-label-description">Перечисли из каких материалов сделан товар</div>
+          </div>
+          <div class="seller-profile__values">
+            <div class="inp-controled">
+              <input type="text" name="" id="" class="inp-seller" placeholder="Дерево">
+              <button class="btn-inp-controled" type="button">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6.22222H14V7.77778H0V6.22222Z"/>
+                  <path d="M7.77778 9.27183e-08L7.77778 14H6.22222L6.22222 0L7.77778 9.27183e-08Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label class="seller-block-title">Индивидуальная характеристики</label>
+            <div class="seller-label-description">Добавить доступные параметры товара, такие как цвет или размер.
+              (Индивидуальная характеристика показывает покупателям, что у твоего товара есть разные характеристики, из
+              которых он сможет выбрать.)
+            </div>
+          </div>
+          <div class="seller-profile__values seller-profile__values-full">
+            <div class="seller-profile__values">
+              <input type="text" name="" id="" class="inp-seller" placeholder="Название характеристики" value="Цвет">
+              <div class="inp-controled">
+                <input type="text" name="" id="" class="inp-seller" placeholder="Вид данной характеристики">
+                <button class="btn-inp-controled" type="button">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 6.22222H14V7.77778H0V6.22222Z"/>
+                    <path d="M7.77778 9.27183e-08L7.77778 14H6.22222L6.22222 0L7.77778 9.27183e-08Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="seller-product__chips">
+              <div class="seller-product-chip">
+                Красный
+                <div class="seller-product-chip__delete"></div>
+              </div>
+              <div class="seller-product-chip">
+                Зеленый
+                <div class="seller-product-chip__delete"></div>
+              </div>
+              <div class="seller-product-chip">
+                Фиолетовый
+                <div class="seller-product-chip__delete"></div>
+              </div>
+              <div class="seller-product-chip">
+                Бежевый
+                <div class="seller-product-chip__delete"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label class="seller-block-title">Индивидуальная характеристики 2</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Название характеристики">
+            <div class="inp-controled">
+              <input type="text" name="" id="" class="inp-seller" placeholder="Вид данной характеристики">
+              <button class="btn-inp-controled" type="button">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6.22222H14V7.77778H0V6.22222Z"/>
+                  <path d="M7.77778 9.27183e-08L7.77778 14H6.22222L6.22222 0L7.77778 9.27183e-08Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label class="seller-block-title">Индивидуальная характеристики со свободной формой</label>
+            <div class="seller-label-description">Например: Напишите имя, которое вы хотите видеть на подвеске.</div>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Индивидуальная характеристики">
+            <div class="seller-label-description">Например: Напишите имя, которое вы хотите видеть на подвеске. Максимум
+              10 букв, без пробелов, кириллица 
+            </div>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="gallery" class="seller-block-title">Фото товара</label>
+            <div class="seller-label-description">Используй до десяти фотографий, чтобы показать самые важные качества
+              товара. Используй естественный свет и без вспышки. Показывай предмет в действии, который носят, держат или
+              используют.Фотографируй на чистом фоне.
+            </div>
+          </div>
+          <div class="seller-profile__values seller-profile__values-full">
+            <input type="file" name="" id="gallery" accept="image/*" multiple>
+            <label for="gallery" class="inp-gallery">
+              <span class="inp-gallery__icon">
+                <img src="img/seller-profile/add-gallery-icon.svg" alt="Добавить фото">
+              </span>
+              <span class="inp-gallery__text">Добавить фото</span>
+            </label>
+            <div class="inp-gallery-uploaded">
+              <div class="inp-gallery-uploaded__close"></div>
+              <img src="img/seller-profile/gal-item-1.jpg" alt="">
+            </div>
+            <div class="inp-gallery-uploaded">
+              <div class="inp-gallery-uploaded__close"></div>
+              <img src="img/seller-profile/gal-item-1.jpg" alt="">
+            </div>
+            <div class="inp-gallery-uploaded">
+              <div class="inp-gallery-uploaded__close"></div>
+              <img src="img/seller-profile/gal-item-1.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-block-title">Видео товара</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Добавьте ссылку на видео">
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-block-title">Цена товара</label>
+            <div class="seller-label-description">Введите цену вашего товара (р.)</div>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Цена товара">
+            <div class="seller-label-description">Цена в магазине с учетом суммы за услуги сервиса будет составлять 3
+              500 р.
+            </div>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-block-title">Ваш товар производится по предзаказу?</label>
+          </div>
+          <div class="seller-profile__values">
+            <label class="seller-profile__radio">
+              <input type="radio" name="regType" class="inp--filter-radio" value="yes">
+              <span class="filter-radio"></span>
+              <span class="filter-label__text">Да</span>
+            </label>
+            <label class="seller-profile__radio">
+              <input type="radio" name="regType" class="inp--filter-radio" value="no" checked>
+              <span class="filter-radio"></span>
+              <span class="filter-label__text">Нет</span>
+            </label>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-block-title">Количество едениц товара</label>
+            <div class="seller-label-description">Введите кол-во товаров которое у вас имееться в наличие, либо отьметь
+              чт товар производиться по предзаказу
+            </div>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Количество едениц">
+          </div>
+        </div>
+      </div>
+      <div class="seller-product__block">
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Адрес отправления товара</div>
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Индекс</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Индекс">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Регион</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Регион">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Город</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Город">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Улица</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Улица">
+          </div>
+        </div>
+        <div class="seller-profile__row seller-profile__row--center">
+          <div class="seller-profile__labels">
+            <label for="" class="seller-label-title">Дом</label>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Дом">
+          </div>
+        </div>
+      </div>
+      <div class="seller-profile__simple-block">
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Выберите способ доставки</div>
+          </div>
+          <div class="seller-profile__values">
+            <div class="custom-select" style="background-color: #FDFDFD;">
+              <select name="" id="">
+                <option value="1" selected>Платная доставка</option>
+                <option value="2">04en Платная доставка</option>
+                <option value="3">Ne Платная доставка</option>
+              </select>
+            </div>
+            <div class="seller-checkboxes">
+              <div class="seller-checkbox">
+                <label class="seller-checkbox-label">
+                  <input type="checkbox" name="" class="inp--filter-check" value="CDEK" checked>
+                  <span class="filter-check"></span>
+                  <span class="filter-label__text">CDEK</span>
+                </label>
+              </div>
+              <div class="seller-checkbox">
+                <label class="seller-checkbox-label">
+                  <input type="checkbox" name="" class="inp--filter-check" value="Почта России">
+                  <span class="filter-check"></span>
+                  <span class="filter-label__text">Почта России</span>
+                </label>
+              </div>
+              <div class="seller-checkbox">
+                <label class="seller-checkbox-label">
+                  <input type="checkbox" name="" class="inp--filter-check" value="Самовывоз">
+                  <span class="filter-check"></span>
+                  <span class="filter-label__text">Самовывоз</span>
+                </label>
+              </div>
+              <div class="seller-checkbox">
+                <label class="seller-checkbox-label">
+                  <input type="checkbox" name="" class="inp--filter-check" value="Другой способ">
+                  <span class="filter-check"></span>
+                  <span class="filter-label__text">Другой способ</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Срок доставки</div>
+            <div class="seller-label-description">Введите ориентировачные интервал срока доставки по России (дней)</div>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller inp-seller--sm" placeholder="от дней">
+            <input type="text" name="" id="" class="inp-seller inp-seller--sm" placeholder="до дней">
+          </div>
+        </div>
+        <div class="seller-profile__row">
+          <div class="seller-profile__labels">
+            <div class="seller-block-title">Цена доставки</div>
+            <div class="seller-label-description">Введите ориентировачные интервал срока доставки по России (дней)</div>
+          </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller inp-seller--sm" placeholder="р.">
+          </div>
+        </div>
+      </div>
+      <div class="seller-product__btn">
+        <button class="btn-red">Добавить товар</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer-menu">
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Покупателям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Доставка</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Оплата</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Производителям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Сколько стоит размещение</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Как мне увеличить продажи</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">О нас
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Цель проекта</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Наша команда</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Помощь
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="mailto:admin@admin.admin" class="footer-menu__link">Еmail</a>
+            </li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Политика</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/handler.js"></script>
+<script src="js/react/home.bundle.js"></script>
+
+</body>
+</html>
