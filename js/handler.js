@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     document.querySelectorAll('.btn-inp-controled').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        let param this.previousSibling.previousSibling.value;
+        let param = this.previousSibling.previousSibling.value;
         this.previousSibling.previousSibling.value = '';
         let elem = '<div class="seller-product-chip">' + param + '<div class="seller-product-chip__delete"></div></div>';
         this.closest('.seller-profile__row').querySelector('.seller-product__chips').insertAdjacentHTML('beforeend', elem);
