@@ -2545,6 +2545,10 @@ input[type=number] {
     width: 170px;
     height: 120px;
 }
+.inp-gallery:hover{
+    border: 1px solid #F04650;
+    cursor: pointer;
+}
 .inp-avatar__icon{
     display: block;
     margin-top: 30px;

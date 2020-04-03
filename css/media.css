@@ -200,8 +200,13 @@
     .seller-profile__values-full{
         max-width: 400px;
     }
+    .inp-gallery{
+        margin-right: 20px;
+    }
     .inp-gallery-uploaded{
+        margin-left: 0;
         margin-bottom: 20px;
+        margin-right: 20px;
     }
 }
 @media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: landscape){

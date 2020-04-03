@@ -132,19 +132,16 @@
             <label class="seller-block-title">Материал товара</label>
             <div class="seller-label-description">Перечисли из каких материалов сделан товар</div>
           </div>
-          <div class="seller-profile__values seller-profile__values-full">
-            <div class="seller-profile__values">
-              <div class="inp-controled">
-                <input type="text" name="" id="" class="inp-seller" placeholder="Дерево">
-                <button class="btn-inp-controled" type="button">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 6.22222H14V7.77778H0V6.22222Z"/>
-                    <path d="M7.77778 9.27183e-08L7.77778 14H6.22222L6.22222 0L7.77778 9.27183e-08Z"/>
-                  </svg>
-                </button>
-              </div>
+          <div class="seller-profile__values">
+            <div class="inp-controled">
+              <input type="text" name="" id="" class="inp-seller" placeholder="Дерево">
+              <button class="btn-inp-controled" type="button">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6.22222H14V7.77778H0V6.22222Z"/>
+                  <path d="M7.77778 9.27183e-08L7.77778 14H6.22222L6.22222 0L7.77778 9.27183e-08Z"/>
+                </svg>
+              </button>
             </div>
-            <div class="seller-product__chips"></div>
           </div>
         </div>
         <div class="seller-profile__row">
@@ -192,20 +189,17 @@
           <div class="seller-profile__labels">
             <label class="seller-block-title">Индивидуальная характеристики 2</label>
           </div>
-          <div class="seller-profile__values seller-profile__values-full">
-            <div class="seller-profile__values">
-              <input type="text" name="" id="" class="inp-seller" placeholder="Название характеристики">
-              <div class="inp-controled">
-                <input type="text" name="" id="" class="inp-seller" placeholder="Вид данной характеристики">
-                <button class="btn-inp-controled" type="button">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 6.22222H14V7.77778H0V6.22222Z"/>
-                    <path d="M7.77778 9.27183e-08L7.77778 14H6.22222L6.22222 0L7.77778 9.27183e-08Z"/>
-                  </svg>
-                </button>
-              </div>
+          <div class="seller-profile__values">
+            <input type="text" name="" id="" class="inp-seller" placeholder="Название характеристики">
+            <div class="inp-controled">
+              <input type="text" name="" id="" class="inp-seller" placeholder="Вид данной характеристики">
+              <button class="btn-inp-controled" type="button">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6.22222H14V7.77778H0V6.22222Z"/>
+                  <path d="M7.77778 9.27183e-08L7.77778 14H6.22222L6.22222 0L7.77778 9.27183e-08Z"/>
+                </svg>
+              </button>
             </div>
-            <div class="seller-product__chips"></div>
           </div>
         </div>
         <div class="seller-profile__row">
@@ -403,11 +397,17 @@
         </div>
         <div class="seller-profile__row">
           <div class="seller-profile__labels">
-            <div class="seller-block-title">Цена доставки</div>
-            <div class="seller-label-description">Введите ориентировачные интервал срока доставки по России (дней)</div>
+            <div class="seller-block-title">Время отправления товара</div>
+            <div class="seller-label-description">Выберите интервал дней необходимых вам для отправления товара</div>
           </div>
           <div class="seller-profile__values">
-            <input type="text" name="" id="" class="inp-seller inp-seller--sm" placeholder="р.">
+            <div class="custom-select" style="background-color: #FDFDFD;">
+              <select name="" id="">
+                <option value="1" selected>Выберите интервал</option>
+                <option value="2">интервал 1</option>
+                <option value="3">интервал 2</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -485,6 +485,7 @@
     </div>
   </div>
 </footer>
+
 <script src="js/handler.js"></script>
 <script src="js/react/home.bundle.js"></script>
 
