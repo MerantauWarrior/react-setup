@@ -1,3 +1,22 @@
+(function (arr) {
+  arr.forEach(function (item) {
+    if (item.hasOwnProperty('remove')) {
+      return;
+    }
+    Object.defineProperty(item, 'remove', {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function remove() {
+        if (this.parentNode === null) {
+          return;
+        }
+        this.parentNode.removeChild(this);
+      }
+    });
+  });
+})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+
 document.addEventListener("DOMContentLoaded", function () {
   //Helper Functions
   if (!Element.prototype.closest) {
@@ -136,13 +155,14 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         let remId = parseInt(this.closest('.checkout-item').getAttribute('data-index'));
-        let productTotalPrice = parseInt(document.getElementsByClassName('checkout-result-item')[remId].getAttribute('data-total'));
+        console.log(remId);
+        let productTotalPrice = parseInt(document.querySelectorAll('.checkout-result-item[data-id="'+remId+'"')[0].getAttribute('data-total'));
         let result = parseInt(document.getElementById('js-total').getAttribute('data-sum')) - productTotalPrice;
         document.getElementById('js-total').setAttribute('data-sum', result);
         document.getElementById('js-total').innerText = result;
-        document.getElementsByClassName('checkout-result-item')[remId].remove();
+        document.querySelectorAll('.checkout-result-item[data-id="'+remId+'"')[0].remove();
+        // document.getElementsByClassName('checkout-result-item')[remId].remove();
         this.closest('.checkout-item').remove();
-        console.log(result);
       });
     });
   }
@@ -171,25 +191,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   //Seller Registration Modals
-  if (document.querySelectorAll('.seller-registration-modal, .seller-registration__btn').length !== 0) {
-    document.querySelectorAll('.seller-registration__btn').forEach(function (btn) {
+  if (document.querySelectorAll('.seller-registration-modal, .js-seller-modal').length !== 0) {
+    document.querySelectorAll('.js-seller-modal').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         let modalName = this.getAttribute('href');
         document.getElementsByTagName('body')[0].classList.add('ovh');
         document.querySelectorAll('.seller-registration-window' + modalName)[0].closest('.seller-registration-modal').classList.add('seller-registration-modal_opened');
+        document.querySelectorAll('.seller-registration-window' + modalName)[0].style.display = 'block';
       })
     });
     //Close Seller Registration on click
+    function sellerModalClose() {
+      document.getElementsByTagName('body')[0].classList.remove('ovh');
+      document.querySelectorAll('.seller-registration-modal')[0].classList.remove('seller-registration-modal_opened');
+      document.querySelectorAll('.seller-registration-window').forEach(function (win) {
+        win.style.display = 'none';
+      });
+    }
     document.getElementsByClassName('seller-registration-modal')[0].addEventListener('click', function (event) {
       if (event.target === document.getElementsByClassName('seller-registration-modal')[0]) {
-        document.getElementsByTagName('body')[0].classList.remove('ovh');
-        document.querySelectorAll('.seller-registration-modal')[0].classList.remove('seller-registration-modal_opened');
+        sellerModalClose();
       }
     });
     document.querySelectorAll('.seller-registration-window__close')[0].addEventListener('click', function () {
-      document.getElementsByTagName('body')[0].classList.remove('ovh');
-      document.querySelectorAll('.seller-registration-modal')[0].classList.remove('seller-registration-modal_opened');
+      sellerModalClose();
     })
   }
   //Gallery Modal
@@ -286,6 +312,30 @@ document.addEventListener("DOMContentLoaded", function () {
       if (event.target.classList.contains('inp-gallery-uploaded__close')) {
         event.target.parentNode.remove();
       }
+    });
+  }
+  //Seller orders tabs
+  if(document.querySelectorAll('.seller-orders__tab-controls').length !== 0){
+    document.querySelectorAll('.seller-orders__tab-link').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.seller-orders__tab-link').forEach(function (links) {
+          links.classList.remove('seller-orders__tab-link_active');
+        });
+        this.classList.add('seller-orders__tab-link_active');
+        document.querySelectorAll('.seller-orders__tab').forEach(function (links) {
+          links.classList.remove('seller-orders__tab_active');
+        });
+        document.querySelector(this.getAttribute('href')).classList.add('seller-orders__tab_active');
+      })
+    });
+  }
+  //Cabinet products delete
+  if(document.querySelectorAll('.js-delete-product, .product').length !== 0){
+    document.querySelectorAll('.js-delete-product').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        this.closest('.cabinet-cards__item').remove();
+      })
     });
   }
 

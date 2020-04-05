@@ -5,8 +5,8 @@ const CategoryProduct = (props) => {
     <div className="card-product">
       <div className="product">
         <div className="product__image">
-          <div className="product-like">
-            <img src="img/like.svg" alt="Like" className="product-like__img"/>
+          <div className="product-action">
+            <img src="img/like.svg" alt="Like" className="product-action__img"/>
           </div>
           <img src="img/product-test.jpg" alt={props.details.title}/>
         </div>
