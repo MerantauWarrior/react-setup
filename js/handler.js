@@ -214,9 +214,11 @@ document.addEventListener("DOMContentLoaded", function () {
         sellerModalClose();
       }
     });
-    document.querySelectorAll('.seller-registration-window__close')[0].addEventListener('click', function () {
-      sellerModalClose();
-    })
+    document.querySelectorAll('.seller-registration-window__close').forEach(function (close) {
+      close.addEventListener('click', function () {
+        sellerModalClose();
+      })
+    });
   }
   //Gallery Modal
   if (document.querySelectorAll('.gallery-modal, .js-gallery-item').length !== 0) {

@@ -1235,6 +1235,35 @@
         min-height: 155px;
         margin: 0 auto;
     }
+    /*Seller orders*/
+    .seller-orders-item{
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .seller-orders-item__visual{
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .seller-orders-item__visual img{
+        width: 100%;
+    }
+    .seller-orders__btns{
+        max-width: 100%;
+    }
+    .seller-orders__top{
+        padding-bottom: 0;
+    }
+    .seller-orders__tab-controls{
+        margin-left: 0;
+    }
+    .seller-orders__tab-link{
+        margin-top: 10px;
+        margin-right: 15px;
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
