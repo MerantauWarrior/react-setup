@@ -75,7 +75,7 @@
     <div class="seller-orders__tabs">
       <div class="seller-orders__tab seller-orders__tab_active" id="shipping">
         <div class="seller-orders__items">
-          <div class="seller-orders__box">
+          <div class="seller-orders__box" data-id="someID123">
             <div class="seller-orders-item">
               <div class="seller-orders-item__visual">
                 <div class="seller-orders-item__img">
@@ -147,10 +147,10 @@
               </div>
             </div>
             <div class="seller-orders__btns">
-              <a href="#sellerOrder-1" class="btn-red js-seller-modal">Подтвердить отправление</a>
+              <a href="#sellerOrderWindow" class="btn-red js-seller-modal">Подтвердить отправление</a>
             </div>
           </div>
-          <div class="seller-orders__box">
+          <div class="seller-orders__box"  data-id="someID567">
             <div class="seller-orders-item">
               <div class="seller-orders-item__visual">
                 <div class="seller-orders-item__img">
@@ -222,14 +222,14 @@
               </div>
             </div>
             <div class="seller-orders__btns">
-              <a href="#sellerOrder-2" class="btn-red js-seller-modal">Подтвердить отправление</a>
+              <a href="#sellerOrderWindow" class="btn-red js-seller-modal">Подтвердить отправление</a>
             </div>
           </div>
         </div>
       </div>
       <div class="seller-orders__tab" id="shipped">
         <div class="seller-orders__items">
-          <div class="seller-orders__box">
+          <div class="seller-orders__box" data-id="someID321">
             <div class="seller-orders-item">
               <div class="seller-orders-item__visual">
                 <div class="seller-orders-item__img">
@@ -301,7 +301,7 @@
               </div>
             </div>
             <div class="seller-orders__btns">
-              <a href="#sellerOrder-2" class="btn-red js-seller-modal">Подтвердить отправление</a>
+              <a href="#sellerOrderWindow" class="btn-red js-seller-modal">Подтвердить отправление</a>
             </div>
           </div>
         </div>
@@ -379,7 +379,7 @@
 </footer>
 
 <div class="seller-registration-modal">
-  <div class="seller-registration-window window-sm" id="sellerOrder-1">
+  <div class="seller-registration-window window-sm" id="sellerOrderWindow">
     <div class="seller-registration-window__close">
       <img src="img/seller-registration/close-modal.svg" alt="">
     </div>
@@ -388,32 +388,9 @@
       <div class="seller-orders-modal__after-title">Введите трек номер при наличии</div>
       <form action="" method="get">
         <div class="seller-registration-modal__field">
-          <label for="qqw" class="seller-registration-modal__label">Трек номер</label>
-          <input type="password" name="qqw" id="qqwq" class="seller-registration-modal__inp"
-                 placeholder="123ABCD">
-        </div>
-        <div class="seller-registration-window__noreg-reg">
-          <button class="seller-registration-modal__btn seller-registration-modal__btn--red" type="submit">
-            Подтвердить
-          </button>
-        </div>
-      </form>
-      <div class="seller-registration-window__text-after">Грамотный текст о том что нельзя подтверждать отправления
-        товара без отправления товара, и что за это будет, штраф, бан товара или еще что то.
-      </div>
-    </div>
-  </div>
-  <div class="seller-registration-window window-sm" id="sellerOrder-2">
-    <div class="seller-registration-window__close">
-      <img src="img/seller-registration/close-modal.svg" alt="">
-    </div>
-    <div class="seller-registration-window__reg">
-      <div class="seller-registration-modal__title">Подтверждение отправления</div>
-      <div class="seller-orders-modal__after-title">Введите трек номер при наличии</div>
-      <form action="" method="get">
-        <div class="seller-registration-modal__field">
-          <label for="qqw" class="seller-registration-modal__label">Трек номер</label>
-          <input type="password" name="qqw" id="qqw" class="seller-registration-modal__inp"
+          <input type="hidden" name="orderID" id="orderID" value="">
+          <label for="qqww" class="seller-registration-modal__label">Трек номер</label>
+          <input type="password" name="qqww" id="qqww" class="seller-registration-modal__inp"
                  placeholder="123ABCD">
         </div>
         <div class="seller-registration-window__noreg-reg">

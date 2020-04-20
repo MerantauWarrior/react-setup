@@ -220,6 +220,16 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     });
   }
+  if (document.querySelectorAll('.seller-orders').length !== 0) {
+    document.querySelectorAll('.js-seller-modal').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        let id = this.closest('.seller-orders__box').dataset.id;
+        console.log(id);
+        document.getElementById('orderID').value = id;
+      })
+    });
+  }
   //Gallery Modal
   if (document.querySelectorAll('.gallery-modal, .js-gallery-item').length !== 0) {
     let group;
@@ -337,10 +347,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   //Cabinet products delete
-  if(document.querySelectorAll('.js-delete-product, .product').length !== 0){
-    document.querySelectorAll('.js-delete-product').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        this.closest('.cabinet-cards__item').remove();
+  if (document.querySelectorAll('.seller-cabinet-products, .js-delete-product-modal, .js-seller-modal').length !== 0) {
+    document.querySelectorAll('.js-seller-modal').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        let id = this.closest('.cabinet-cards__item').dataset.id;
+        document.getElementById('productID').value = id;
+      })
+    });
+    document.querySelectorAll('.js-delete-product-modal').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        let id = document.getElementById('productID').value;
+        document.querySelectorAll('[data-id="'+id+'"]')[0].remove();
+        sellerModalClose();
+      })
+    });
+    document.querySelectorAll('.seller-window-cancel').forEach(function (close) {
+      close.addEventListener('click', function () {
+        sellerModalClose();
       })
     });
   }
