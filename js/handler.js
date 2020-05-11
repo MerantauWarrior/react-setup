@@ -306,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   }
   //Seller product
-  if(document.querySelectorAll('.seller-product-chip, .btn-inp-controled').length !== 0){
+  if(document.querySelectorAll('.seller-product-chip, .btn-inp-controled, .inp-gallery-uploaded__close').length !== 0){
     document.addEventListener('click', function (event) {
       if (event.target.classList.contains('seller-product-chip__delete')) {
         event.target.closest('.seller-product-chip').remove();
@@ -366,6 +366,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.seller-window-cancel').forEach(function (close) {
       close.addEventListener('click', function () {
         sellerModalClose();
+      })
+    });
+  }
+//  User feedback
+  if(document.querySelectorAll('.user-feedback').length !== 0){
+    document.querySelectorAll('.user-feedback-rating__item').forEach(function (rating) {
+      rating.addEventListener('click', function () {
+        document.querySelectorAll('.user-feedback-rating__item').forEach(function (notRated) {
+          notRated.classList.remove('user-feedback-rating__item_checked');
+        });
+        this.classList.add('user-feedback-rating__item_checked');
+        document.getElementById('rating').value = this.dataset.star;
       })
     });
   }

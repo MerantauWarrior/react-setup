@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>User Feedback</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+<div class="fader"></div>
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__inner">
+        <div class="logo">
+          <a href="#"><img src="img/logo.svg" alt="Dalaran"></a>
+        </div>
+        <div class="search">
+          <a href="#" class="header-catalog-menu">Каталог</a>
+          <form action="" method="get" class="form-search">
+            <input type="text" name="search" id="search" class="inp-search">
+            <button class="btn-search" type="submit"></button>
+          </form>
+        </div>
+        <div class="header-top-menu">
+          <div class="header-top-menu__mobile"></div>
+          <div class="header-top-menu__inner">
+            <ul class="header-top-menu__list">
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-wishlist">
+                  <img src="img/wishlist.svg" class="header-top-wishlist__icon" alt="wishlist">
+                  <span class="header-top-wishlist__text">Избранное</span>
+                </a>
+              </li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-wishlist">
+                  <img src="img/general/notifications.svg" class="header-top-wishlist__icon" alt="wishlist">
+                  <span class="header-top-wishlist__text">notifications</span>
+                </a>
+              </li>
+              <li class="header-top-menu__item">
+                <a href="#" class="header-top-wishlist">
+                  <img src="img/general/comments.svg" class="header-top-wishlist__icon" alt="wishlist">
+                  <span class="header-top-wishlist__text">comments</span>
+                </a>
+              </li>
+              <div class="header-top-profile mobile">
+                <div class="header-top-profile__link"><img src="img/general/profile.svg" class="header-top-profile__icon">
+                  Профиль</div>
+                <div class="header-top-profile__menu">
+                  <div class="header-top-profile__menu-inner">
+                    <a href="#" class="header-top-profile__menu-link">Мой профиль</a>
+                    <a href="#" class="header-top-profile__menu-link">Мои заказы</a>
+                    <a href="#" class="header-top-profile__menu-link">Мои товары</a>
+                    <a href="#" class="header-top-profile__exit">
+                      <img src="img/general/exit.svg" alt="">
+                      Выйти
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="header-top-controls">
+          <a href="#" class="header-top-basket">
+            <span class="header-top-basket__qty">2</span>
+            <img src="img/basket.svg" alt="basket" class="header-top-basket__icon">
+          </a>
+        </div>
+        <div class="header-top-profile">
+          <div class="header-top-profile__link"><img src="img/general/profile.svg" class="header-top-profile__icon">
+            Профиль</div>
+          <div class="header-top-profile__menu">
+            <div class="header-top-profile__menu-inner">
+              <a href="#" class="header-top-profile__menu-link">Мой профиль</a>
+              <a href="#" class="header-top-profile__menu-link">Мои заказы</a>
+              <a href="#" class="header-top-profile__menu-link">Мои товары</a>
+              <a href="#" class="header-top-profile__exit">
+                <img src="img/general/exit.svg" alt="">
+                Выйти
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="container">
+      <ul class="menu-list" id="MenuList"></ul>
+    </div>
+  </div>
+</header>
+
+<section class="user-feedback">
+  <div class="container">
+    <h1 class="title">Отзыв</h1>
+    <div class="user-feedback__product-name">Название товара</div>
+    <form action="" method="get" class="user-feedback__form">
+      <div class="user-feedback__block">
+        <div class="seller-block-title">Общая оценка</div>
+        <div class="user-feedback-rating">
+          <div class="user-feedback-rating__item" data-star="5"></div>
+          <div class="user-feedback-rating__item" data-star="4"></div>
+          <div class="user-feedback-rating__item" data-star="3"></div>
+          <div class="user-feedback-rating__item" data-star="2"></div>
+          <div class="user-feedback-rating__item" data-star="1"></div>
+          <input type="hidden" name="rating" id="rating" value="">
+        </div>
+      </div>
+      <div class="user-feedback__block">
+        <label for="descr" class="seller-block-title">Впечатление от товара</label>
+        <textarea name="descr" id="descr" class="txt-product"
+                  placeholder="Расскажитео своём опыте использования товара — это поможет другим покупателям определиться с выбором. Обратите внимание на качество, удобство, соответствие заявленным характеристикам."></textarea>
+      </div>
+      <div class="user-feedback__block">
+        <div class="seller-block-title">Фото товара</div>
+        <div class="seller-profile__values seller-profile__values-full">
+          <input type="file" name="" id="gallery" accept="image/*" multiple>
+          <label for="gallery" class="inp-gallery">
+              <span class="inp-gallery__icon">
+                <img src="img/seller-profile/add-gallery-icon.svg" alt="Добавить фото">
+              </span>
+            <span class="inp-gallery__text">Добавить фото</span>
+          </label>
+          <div class="inp-gallery-uploaded">
+            <div class="inp-gallery-uploaded__close"></div>
+            <img src="img/seller-profile/gal-item-1.jpg" alt="">
+          </div>
+          <div class="inp-gallery-uploaded">
+            <div class="inp-gallery-uploaded__close"></div>
+            <img src="img/seller-profile/gal-item-1.jpg" alt="">
+          </div>
+          <div class="inp-gallery-uploaded">
+            <div class="inp-gallery-uploaded__close"></div>
+            <img src="img/seller-profile/gal-item-1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="user-feedback__submit">
+        <button class="btn-red" type="submit">Оставить отзыв</button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer-menu">
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Покупателям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Доставка</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Оплата</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Производителям
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Сколько стоит размещение</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Как мне увеличить продажи</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">О нас
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Цель проекта</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Наша команда</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Возврат</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu__item">
+          <div class="footer-menu__title">Помощь
+            <div class="footer-menu__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path d="M1 2.82812L3.82843 5.65655L6.65685 2.82812" stroke="black" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__list-item"><a href="mailto:admin@admin.admin" class="footer-menu__link">Еmail</a>
+            </li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Политика</a></li>
+            <li class="footer-menu__list-item"><a href="#" class="footer-menu__link">Другой вопрос</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/handler.js"></script>
+<script src="js/react/home.bundle.js"></script>
+
+</body>
+</html>
