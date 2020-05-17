@@ -381,5 +381,33 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     });
   }
+//  Chat
+  if(document.querySelectorAll('.chat').length !== 0){
+    document.querySelector('.chat-info__title').addEventListener('click', function () {
+      this.style.display = 'none';
+      document.querySelector('.chat-info__box').style.display = 'block';
+    });
+    document.querySelector('.chat-info__box-hide span').addEventListener('click', function () {
+      this.parentNode.parentNode.style.display = 'none';
+      document.querySelector('.chat-info__title').style.display = 'block';
+    });
+
+    let mql = window.matchMedia('(max-width: 767px)');
+    function screenTest(e) {
+      if (e.matches) {
+        document.querySelectorAll('.chat-user').forEach(function (user) {
+          user.addEventListener('click', function () {
+            document.querySelector('.chat-sidebar').style.display = 'none';
+            document.querySelector('.chat-content').style.display = 'flex';
+          })
+        });
+        document.querySelector('.chat-info-mobile__back').addEventListener('click', function () {
+          document.querySelector('.chat-sidebar').style.display = 'block';
+          document.querySelector('.chat-content').style.display = 'none';
+        });
+      }
+    }
+    mql.addListener(screenTest);
+  }
 
 });
