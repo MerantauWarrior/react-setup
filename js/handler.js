@@ -392,22 +392,19 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector('.chat-info__title').style.display = 'block';
     });
 
-    let mql = window.matchMedia('(max-width: 767px)');
-    function screenTest(e) {
-      if (e.matches) {
-        document.querySelectorAll('.chat-user').forEach(function (user) {
-          user.addEventListener('click', function () {
-            document.querySelector('.chat-sidebar').style.display = 'none';
-            document.querySelector('.chat-content').style.display = 'flex';
-          })
-        });
-        document.querySelector('.chat-info-mobile__back').addEventListener('click', function () {
-          document.querySelector('.chat-sidebar').style.display = 'block';
-          document.querySelector('.chat-content').style.display = 'none';
-        });
-      }
+    if ( window.matchMedia('(max-width: 767px)').matches){
+      document.querySelectorAll('.chat-user').forEach(function (user) {
+        user.addEventListener('click', function () {
+          document.querySelector('.chat-sidebar').style.display = 'none';
+          document.querySelector('.chat-content').style.display = 'flex';
+        })
+      });
+      document.querySelector('.chat-info-mobile__back').addEventListener('click', function () {
+        document.querySelector('.chat-sidebar').style.display = 'block';
+        document.querySelector('.chat-content').style.display = 'none';
+      });
     }
-    mql.addListener(screenTest);
+
   }
 
 });
